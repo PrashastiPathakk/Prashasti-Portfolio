@@ -66,7 +66,7 @@ export default function Projects() {
             <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
                 <div>
                     <h2 className="text-3xl md:text-5xl font-bold mb-4 uppercase">Projects</h2>
-                    <p className="text-foreground/40 max-w-xl text-sm uppercase font-bold">// Engineering Case Studies.</p>
+                    <p className="text-foreground/40 max-w-xl text-sm uppercase font-bold text-primary tracking-widest leading-loose">Software Engineering Portfolio</p>
                 </div>
                 <motion.a
                     whileHover={{ x: 10, scale: 1.05 }}

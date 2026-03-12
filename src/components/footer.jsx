@@ -10,10 +10,8 @@ export default function Footer() {
                 <div className="flex flex-col md:flex-row justify-between items-center gap-8 mb-12">
                     <div className="flex flex-col gap-4">
                         <div className="font-extrabold text-3xl uppercase tracking-tight gradient-text">Prashasti Pathak</div>
-                        <p className="text-foreground/40 max-w-xs text-xs uppercase font-bold">
-                            // Software Developer & SDE Intern.
-                            <br />
-                            // Building for the next billion users.
+                        <p className="text-foreground/40 max-w-xs text-xs uppercase font-bold tracking-widest leading-loose">
+                            Software Developer & SDE Intern
                         </p>
                     </div>
 
@@ -31,8 +29,8 @@ export default function Footer() {
                 </div>
 
                 <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-white/5 gap-6">
-                    <div className="flex items-center gap-4 text-[10px] uppercase font-bold tracking-widest text-foreground/30">
-                        <span>&copy; {new Date().getFullYear()} PRASHASTI. TERMINAL_MODE: ACTIVE.</span>
+                    <div className="flex items-center gap-4 text-[10px] uppercase font-bold tracking-widest text-foreground/30 leading-loose">
+                        <span>&copy; {new Date().getFullYear()} PRASHASTI PATHAK. ALL RIGHTS RESERVED.</span>
                         <ArchModalTrigger />
                     </div>
 

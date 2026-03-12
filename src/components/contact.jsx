@@ -22,7 +22,7 @@ export default function Contact() {
                     className="p-12 md:p-20 rounded-[3rem] glass dark:glass-dark border border-white/10"
                 >
                     <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-bold mb-8">
-                        <MessageSquare size={16} /> <span className="uppercase tracking-widest">Let&apos;s Build Together</span>
+                        <MessageSquare size={16} /> <span className="uppercase tracking-widest leading-loose">Get In Touch</span>
                     </div>
 
                     <h2 className="text-4xl md:text-7xl font-bold mb-6 uppercase">

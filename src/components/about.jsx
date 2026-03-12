@@ -18,13 +18,13 @@ export default function About() {
 
                     <div className="space-y-4 text-foreground/80 leading-relaxed">
                         <p>
-                            I&apos;m a final-year Computer Science student and active SDE Intern at JBH Tech Innovation, where I design and ship production-grade software daily.
+                            I am a final-year Computer Science student and Software Developer Intern at JBH Tech Innovation, where I contribute to the development of production-grade software systems.
                         </p>
                         <p>
-                            I care deeply about building applications that are both technically solid and genuinely useful — from full-stack web apps to algorithmic tools. 
+                            My focus lies in architecting applications that balance technical robustness with practical utility — ranging from comprehensive full-stack platforms to optimized algorithmic tools.
                         </p>
                         <p>
-                            I don&apos;t just write code that works — I write code that makes a difference.
+                            I prioritize long-term maintainability and performance, ensuring that every project delivers measurable value through engineered excellence.
                         </p>
                     </div>
 

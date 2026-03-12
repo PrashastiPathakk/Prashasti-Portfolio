@@ -43,8 +43,8 @@ export default function Experience() {
                             <h2 className="text-3xl md:text-5xl font-bold mb-4 uppercase">
                                 Experience
                             </h2>
-                            <p className="text-foreground/40 text-sm max-w-md uppercase font-bold">
-                                // Professional Journey & Internships.
+                            <p className="text-foreground/40 text-sm max-w-md uppercase font-bold text-primary tracking-widest leading-loose">
+                                Professional Background
                             </p>
                         </div>
 

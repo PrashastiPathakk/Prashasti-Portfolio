@@ -5,32 +5,32 @@ import { Layers, GitBranch, ShieldCheck } from 'lucide-react';
 
 const principles = [
     {
-        title: "Build for the User First",
+        title: "User-Centric Engineering",
         icon: <Layers size={32} className="text-primary" />,
-        body: "Every technical decision I make traces back to one question: does this make the experience better? Clean architecture and optimized queries only matter if they serve the person on the other end of the screen."
+        body: "Technical decisions are rooted in user experience. Clean architecture and efficient systems are primarily means to deliver seamless, reliable applications to the end user."
     },
     {
-        title: "Structure Prevents Chaos",
+        title: "Robust Architecture",
         icon: <GitBranch size={32} className="text-accent" />,
-        body: "A well-organized codebase is a gift to your future self and your team. I invest in clean folder structure, consistent naming, and readable logic before worrying about optimization — because unmaintainable fast code is still broken code."
+        body: "I prioritize structured, maintainable codebases. Scalability and longevity are achieved through consistent naming conventions, modular logic, and proactive documentation."
     },
     {
-        title: "Ship It, Then Improve It",
+        title: "Iterative Development",
         icon: <ShieldCheck size={32} className="text-primary" />,
-        body: "Waiting for perfection is how projects die. I build working solutions first, get them in front of real users, and iterate based on actual feedback — not imagined requirements."
+        body: "Functional solutions are better than deferred perfection. I build, deploy, and refine systems based on real-world feedback and validated requirements."
     }
 ];
 
 export default function BackendArchitecture() {
     return (
-        <section id="principles" className="py-24 px-4 bg-foreground/5 overflow-hidden font-mono">
+        <section id="principles" className="py-24 px-4 bg-foreground/5 overflow-hidden">
             <div className="max-w-7xl mx-auto">
                 <div className="mb-16">
-                    <h2 className="text-3xl md:text-5xl font-bold mb-4 italic uppercase tracking-tighter">
-                        03 / <span className="gradient-text">Principles</span>
+                    <h2 className="text-3xl md:text-5xl font-bold mb-4 uppercase">
+                        Engineering Principles
                     </h2>
-                    <p className="text-foreground/40 text-sm max-w-md uppercase font-bold italic">
-                        // Engineering Philosophy.
+                    <p className="text-foreground/60 text-lg max-w-2xl leading-relaxed">
+                        The core philosophies that guide my software development process and architectural choices.
                     </p>
                 </div>
 
@@ -42,13 +42,13 @@ export default function BackendArchitecture() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
-                            className="p-8 rounded-2xl glass dark:glass-dark group hover:border-primary/50 transition-all duration-300 flex flex-col gap-6"
+                            className="p-10 rounded-[2.5rem] glass dark:glass-dark group hover:border-primary/50 transition-all duration-500 flex flex-col gap-6 shadow-xl shadow-black/5"
                         >
-                            <div className="p-4 rounded-xl bg-white/5 group-hover:bg-primary/10 transition-colors w-fit">
+                            <div className="p-5 rounded-2xl bg-foreground/5 group-hover:bg-primary/10 transition-all duration-500 w-fit">
                                 {p.icon}
                             </div>
-                            <h3 className="text-xl font-bold italic uppercase tracking-tight">{p.title}</h3>
-                            <p className="text-foreground/60 text-sm leading-relaxed">
+                            <h3 className="text-xl font-bold uppercase tracking-tight group-hover:text-primary transition-colors">{p.title}</h3>
+                            <p className="text-foreground/60 leading-relaxed">
                                 {p.body}
                             </p>
                         </motion.div>

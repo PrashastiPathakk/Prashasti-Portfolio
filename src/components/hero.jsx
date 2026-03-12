@@ -29,13 +29,13 @@ export default function Hero() {
                     </motion.span>
 
                     <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6">
-                        I build applications that <span className="gradient-text">solve real-world problems.</span>
+                        Engineering scalable solutions for <span className="gradient-text">complex digital challenges.</span>
                         <br />
-                        <span className="text-foreground/50 text-3xl md:text-5xl">Full-Stack. Scalable. Built for impact.</span>
+                        <span className="text-foreground/50 text-3xl md:text-5xl">Full-Stack Development. Architectural Excellence.</span>
                     </h1>
 
                     <p className="text-lg md:text-xl text-foreground/70 mb-10 leading-relaxed max-w-xl">
-                        Final-year Computer Science student and active SDE Intern at JBH Tech Innovation — shipping impactful, production-ready software daily.
+                        Final-year Computer Science student and Software Developer Intern at JBH Tech Innovation — focused on architecting production-grade applications with modern technologies.
                     </p>
 
                     <div className="flex flex-col sm:flex-row items-center gap-4 mb-12">
