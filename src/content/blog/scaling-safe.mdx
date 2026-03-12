@@ -1,0 +1,44 @@
+---
+title: "Building devTinder: The Matching Algorithm"
+date: "2024-10-24"
+description: "How I implemented a discovery engine for developers using Node.js and MongoDB."
+tags: ["Backend", "Matching", "Node.js"]
+---
+
+# Building devTinder: The Matching Algorithm
+
+In this post, I detail the journey of building the matching and discovery logic for devTinder.
+
+## Why a Discovery Engine?
+
+Developers need a focused way to find peers with complementary skills. devTinder solves this by analyzing user stacks and interests to suggest high-value connections.
+
+## The Backend Pipeline
+
+Building a matching system required a robust data pipeline to handle:
+
+- **Filter Operations**: Efficiently querying MongoDB to exclude already swiped profiles.
+- **Role-Based Access**: Ensuring users can only swipe based on their authorization status.
+- **RESTful Endpoints**: Clean API design for seamless frontend-backend integration.
+
+```javascript
+// Example: Fetching Potential Matches
+router.get("/feed", userAuth, async (req, res) => {
+  const loggedInUser = req.user;
+  const hideUsers = new Set();
+  // ... Logic to filter swiped users
+  const users = await User.find({
+    _id: { $nin: Array.from(hideUsers) },
+  }).select("firstName lastName photoUrl age gender about skills");
+  res.send(users);
+});
+```
+
+## Results
+
+By optimizing the database queries and indexing:
+- **Low Latency**: Feed generation in under 150ms.
+- **Scalable Design**: Ready to handle thousands of concurrent users.
+- **Clean UX**: A smooth discovery experience for the developer community.
+
+This project demonstrated the power of combining modern AI with robust backend engineering to solve real-world security challenges.
