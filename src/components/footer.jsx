@@ -24,7 +24,7 @@ export default function Footer() {
                         <Link href="https://www.linkedin.com/in/prashastipathakk" target="_blank" className="p-4 bg-foreground/5 border border-white/5 text-foreground/40 hover:text-primary transition-all">
                             <Linkedin size={18} />
                         </Link>
-                        <Link href="mailto:pathakprashasti1@gmail.com" className="p-4 bg-foreground/5 border border-white/5 text-foreground/40 hover:text-primary transition-all">
+                        <Link href="mailto:prashastipathak1@gmail.com" className="p-4 bg-foreground/5 border border-white/5 text-foreground/40 hover:text-primary transition-all">
                             <Mail size={18} />
                         </Link>
                     </div>

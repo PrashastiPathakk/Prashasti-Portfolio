@@ -6,7 +6,7 @@ import { Mail, Linkedin, Github, MessageSquare, ArrowUpRight } from 'lucide-reac
 const socials = [
     { name: 'LinkedIn', icon: <Linkedin size={24} />, href: 'https://www.linkedin.com/in/prashastipathakk', color: 'hover:text-[#0077b5]' },
     { name: 'GitHub', icon: <Github size={24} />, href: 'https://github.com/PrashastiPathakk', color: 'hover:text-primary' },
-    { name: 'Email', icon: <Mail size={24} />, href: 'mailto:pathakprashasti1@gmail.com', color: 'hover:text-red-500' },
+    { name: 'Email', icon: <Mail size={24} />, href: 'mailto:prashastipathak1@gmail.com', color: 'hover:text-red-500' },
 ];
 
 export default function Contact() {
@@ -37,7 +37,7 @@ export default function Contact() {
                         <motion.a
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            href="mailto:pathakprashasti1@gmail.com"
+                            href="mailto:prashastipathak1@gmail.com"
                             className="px-10 py-5 bg-primary text-black font-extrabold flex items-center gap-2 text-xs uppercase tracking-[0.2em]"
                         >
                             Email Me <ArrowUpRight size={18} />
