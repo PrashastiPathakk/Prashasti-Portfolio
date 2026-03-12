@@ -2,60 +2,78 @@
 
 import { motion } from 'framer-motion';
 
-const skillCategories = [
-    {
-        title: 'Languages',
-        skills: ['C', 'C++', 'Java', 'Python', 'JavaScript']
-    },
-    {
-        title: 'Web Development',
-        skills: ['HTML', 'CSS', 'React', 'Node.js', 'Express.js']
-    },
-    {
-        title: 'Databases & Tools',
-        skills: ['PostgreSQL', 'MongoDB', 'Git', 'GitHub', 'VS Code']
-    },
-    {
-        title: 'CS Fundamentals',
-        skills: ['DSA', 'OOPs', 'DBMS', 'OS', 'Networking']
-    }
+const coreStack = [
+    { name: 'JavaScript', level: 'EXPERT', percentage: 95 },
+    { name: 'React', level: 'EXPERT', percentage: 90 },
+    { name: 'Node.js', level: 'EXPERT', percentage: 90 },
+    { name: 'Express.js', level: 'PROFICIENT', percentage: 85 },
+    { name: 'C++', level: 'PROFICIENT', percentage: 85 },
+    { name: 'Java', level: 'PROFICIENT', percentage: 80 },
+    { name: 'DSA', level: 'PROFICIENT', percentage: 85 },
+];
+
+const workingKnowledge = [
+    'HTML', 'CSS', 'Python', 'C', 'PostgreSQL', 'MongoDB', 'Git', 'GitHub', 'VS Code', 'OOPs', 'DBMS', 'OS', 'Networking'
 ];
 
 export default function Skills() {
     return (
         <section id="skills" className="py-24 px-4 bg-foreground/5 overflow-hidden">
             <div className="max-w-7xl mx-auto">
-                <div className="text-left mb-16">
-                    <h2 className="text-3xl md:text-5xl font-bold mb-4 uppercase">
-                        Technical Skills
-                    </h2>
-                    <p className="text-foreground/60 text-lg max-w-2xl leading-relaxed">
-                        A comprehensive overview of my technical proficiencies and core engineering competencies.
-                    </p>
+                <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+                    <div className="text-left">
+                        <h2 className="text-3xl md:text-5xl font-bold mb-4 uppercase">
+                            Skills
+                        </h2>
+                        <p className="text-foreground/60 text-lg max-w-2xl leading-relaxed">
+                            A breakdown of my technical proficiencies and core engineering expertise.
+                        </p>
+                    </div>
                 </div>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    {skillCategories.map((category) => (
-                        <motion.div
-                            key={category.title}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            className="p-8 rounded-3xl bg-background border border-foreground/5 hover:border-primary/30 transition-all group"
-                        >
-                            <h3 className="text-primary font-bold uppercase tracking-widest text-xs mb-6 pb-2 border-b border-foreground/5 group-hover:border-primary/20 transition-colors">
-                                {category.title}
-                            </h3>
-                            <div className="flex flex-col gap-4">
-                                {category.skills.map((skill) => (
-                                    <div key={skill} className="flex items-center gap-2">
-                                        <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                                        <span className="text-foreground/80 font-medium">{skill}</span>
+                <div className="grid lg:grid-cols-2 gap-16">
+                    {/* Core Stack */}
+                    <div>
+                        <h3 className="text-xs font-bold uppercase tracking-[0.3em] mb-10 text-primary">Core Expertise</h3>
+                        <div className="space-y-10">
+                            {coreStack.map((skill) => (
+                                <div key={skill.name} className="group">
+                                    <div className="flex justify-between items-end mb-3">
+                                        <div className="flex items-end gap-4">
+                                            <span className="text-2xl font-bold uppercase">{skill.name}</span>
+                                            <span className="text-[10px] pb-1 font-bold text-foreground/30 uppercase">{skill.level}</span>
+                                        </div>
+                                        <span className="text-sm font-bold opacity-0 group-hover:opacity-100 transition-opacity text-primary">{skill.percentage}%</span>
                                     </div>
-                                ))}
-                            </div>
-                        </motion.div>
-                    ))}
+                                    <div className="h-2 w-full bg-foreground/5 relative overflow-hidden">
+                                        <motion.div
+                                            initial={{ x: '-100%' }}
+                                            whileInView={{ x: `${skill.percentage - 100}%` }}
+                                            viewport={{ once: true }}
+                                            transition={{ duration: 1, ease: 'easeOut' }}
+                                            className="absolute inset-0 bg-primary"
+                                        />
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Technical Foundations */}
+                    <div>
+                        <h3 className="text-xs font-bold uppercase tracking-[0.3em] mb-10 text-accent">Technical foundations</h3>
+                        <div className="flex flex-wrap gap-3">
+                            {workingKnowledge.map((skill) => (
+                                <motion.span
+                                    key={skill}
+                                    whileHover={{ scale: 1.05 }}
+                                    className="px-6 py-3 bg-background border border-foreground/5 text-sm font-bold uppercase tracking-wider hover:border-primary/50 transition-all rounded-xl"
+                                >
+                                    {skill}
+                                </motion.span>
+                            ))}
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
