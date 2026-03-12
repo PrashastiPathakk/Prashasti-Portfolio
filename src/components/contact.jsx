@@ -11,7 +11,7 @@ const socials = [
 
 export default function Contact() {
     return (
-        <section id="contact" className="py-24 px-4 overflow-hidden relative border-t border-white/5 font-mono">
+        <section id="contact" className="py-24 px-4 overflow-hidden relative border-t border-white/5">
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/10 rounded-full blur-[120px] -z-10" />
 
             <div className="max-w-4xl mx-auto text-center">
@@ -25,8 +25,8 @@ export default function Contact() {
                         <MessageSquare size={16} /> <span className="uppercase tracking-widest">Let&apos;s Build Together</span>
                     </div>
 
-                    <h2 className="text-4xl md:text-7xl font-bold mb-6 tracking-tighter italic uppercase">
-                        06 / <span className="gradient-text">Contact</span>
+                    <h2 className="text-4xl md:text-7xl font-bold mb-6 uppercase">
+                        Contact
                     </h2>
 
                     <p className="text-lg text-foreground/60 mb-12 max-w-xl mx-auto leading-relaxed">

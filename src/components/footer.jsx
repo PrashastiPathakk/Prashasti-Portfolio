@@ -5,12 +5,12 @@ import ArchModalTrigger from './arch-modal-trigger';
 
 export default function Footer() {
     return (
-        <footer className="border-t border-white/5 py-12 px-4 bg-background font-mono">
+        <footer className="border-t border-white/5 py-12 px-4 bg-background">
             <div className="max-w-7xl mx-auto">
                 <div className="flex flex-col md:flex-row justify-between items-center gap-8 mb-12">
                     <div className="flex flex-col gap-4">
-                        <div className="font-extrabold text-3xl italic uppercase tracking-tighter gradient-text">Prashasti Pathak</div>
-                        <p className="text-foreground/40 max-w-xs text-xs uppercase font-bold italic">
+                        <div className="font-extrabold text-3xl uppercase tracking-tight gradient-text">Prashasti Pathak</div>
+                        <p className="text-foreground/40 max-w-xs text-xs uppercase font-bold">
                             // Software Developer & SDE Intern.
                             <br />
                             // Building for the next billion users.

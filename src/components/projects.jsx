@@ -62,11 +62,11 @@ const projects = [
 
 export default function Projects() {
     return (
-        <section id="projects" className="py-24 px-4 max-w-7xl mx-auto font-mono">
+        <section id="projects" className="py-24 px-4 max-w-7xl mx-auto">
             <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
                 <div>
-                    <h2 className="text-3xl md:text-5xl font-bold mb-4 italic uppercase tracking-tighter">04 / <span className="gradient-text">Projects.</span></h2>
-                    <p className="text-foreground/40 max-w-xl text-sm uppercase font-bold italic">// Engineering Case Studies.</p>
+                    <h2 className="text-3xl md:text-5xl font-bold mb-4 uppercase">Projects</h2>
+                    <p className="text-foreground/40 max-w-xl text-sm uppercase font-bold">// Engineering Case Studies.</p>
                 </div>
                 <motion.a
                     whileHover={{ x: 10, scale: 1.05 }}
@@ -139,8 +139,8 @@ export default function Projects() {
                                 <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-foreground/40">Case Study</span>
                             </div>
 
-                            <h3 className="text-3xl font-bold mb-4 italic uppercase tracking-tight">{project.title}</h3>
-                            <p className="text-lg text-foreground/60 mb-8 italic leading-relaxed text-justify">&quot;{project.tagline}&quot;</p>
+                            <h3 className="text-3xl font-bold mb-4 uppercase tracking-tight">{project.title}</h3>
+                            <p className="text-lg text-foreground/60 mb-8 leading-relaxed text-justify">&quot;{project.tagline}&quot;</p>
 
                             <div className="space-y-6 mb-10">
                                 <div>

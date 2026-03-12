@@ -17,12 +17,12 @@ const workingKnowledge = [
 
 export default function Skills() {
     return (
-        <section id="skills" className="py-24 px-4 bg-foreground/5 overflow-hidden font-mono">
+        <section id="skills" className="py-24 px-4 bg-foreground/5 overflow-hidden">
             <div className="max-w-7xl mx-auto">
                 <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
                     <div className="text-left">
-                        <h2 className="text-3xl md:text-5xl font-bold mb-4 italic uppercase tracking-tighter">
-                            02 / <span className="gradient-text">Skills</span>
+                        <h2 className="text-3xl md:text-5xl font-bold mb-4 uppercase">
+                            Skills
                         </h2>
                         <p className="text-foreground/40 text-sm max-w-md uppercase font-bold">
                             // Technical competency self-assessed based on production experience and depth of architectural knowledge.
@@ -39,7 +39,7 @@ export default function Skills() {
                                 <div key={skill.name} className="group">
                                     <div className="flex justify-between items-end mb-3">
                                         <div className="flex items-end gap-4">
-                                            <span className="text-2xl font-bold tracking-tighter italic uppercase">{skill.name}</span>
+                                            <span className="text-2xl font-bold uppercase">{skill.name}</span>
                                             <span className="text-[10px] pb-1 font-bold text-foreground/30 uppercase">{skill.level}</span>
                                         </div>
                                         <span className="text-sm font-bold opacity-0 group-hover:opacity-100 transition-opacity text-primary">{skill.percentage}%</span>

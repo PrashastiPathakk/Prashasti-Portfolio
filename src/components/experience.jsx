@@ -35,15 +35,15 @@ const achievements = [
 
 export default function Experience() {
     return (
-        <section id="experience" className="py-24 px-4 bg-foreground/5 font-mono">
+        <section id="experience" className="py-24 px-4 bg-foreground/5">
             <div className="max-w-7xl mx-auto">
                 <div className="grid lg:grid-cols-3 gap-16">
                     <div className="lg:col-span-2">
                         <div className="mb-12">
-                            <h2 className="text-3xl md:text-5xl font-bold mb-4 italic uppercase tracking-tighter">
-                                05 / <span className="gradient-text">Experience</span>
+                            <h2 className="text-3xl md:text-5xl font-bold mb-4 uppercase">
+                                Experience
                             </h2>
-                            <p className="text-foreground/40 text-sm max-w-md uppercase font-bold italic">
+                            <p className="text-foreground/40 text-sm max-w-md uppercase font-bold">
                                 // Professional Journey & Internships.
                             </p>
                         </div>
@@ -60,7 +60,7 @@ export default function Experience() {
                                     <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary border-4 border-background" />
 
                                     <div className="mb-6">
-                                        <h3 className="text-2xl font-bold italic uppercase tracking-tight">{item.role}</h3>
+                                        <h3 className="text-2xl font-bold uppercase tracking-tight">{item.role}</h3>
                                         <div className="flex flex-wrap gap-4 mt-2 text-primary font-bold uppercase text-xs tracking-widest">
                                             <span className="flex items-center gap-1"><MapPin size={14} /> {item.company}</span>
                                             <span className="flex items-center gap-1"><Calendar size={14} /> {item.period}</span>
@@ -83,7 +83,7 @@ export default function Experience() {
                     </div>
 
                     <div>
-                        <h2 className="text-xl font-bold mb-12 italic uppercase tracking-widest text-foreground/40">// Achievements.</h2>
+                        <h2 className="text-xl font-bold mb-12 uppercase tracking-widest text-foreground/40">// Achievements.</h2>
                         <div className="space-y-6">
                             {achievements.map((item, index) => (
                                 <motion.div
