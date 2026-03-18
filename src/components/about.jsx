@@ -12,9 +12,15 @@ export default function About() {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                 >
-                    <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                        About
-                    </h2>
+                    <div className="space-y-4 mb-10">
+                        <div className="flex items-center gap-3">
+                            <div className="w-10 h-[1.5px] bg-primary/40" />
+                            <span className="text-[10px] font-black text-primary uppercase tracking-[0.5em]">System_Overview</span>
+                        </div>
+                        <h2 className="text-5xl md:text-7xl font-black italic tracking-tighter text-foreground uppercase leading-none">
+                            ENGINEERING<br/>PROFILE.
+                        </h2>
+                    </div>
 
                     <div className="space-y-6 text-foreground/80 leading-relaxed text-lg">
                         <p>

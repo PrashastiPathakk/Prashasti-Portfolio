@@ -10,7 +10,7 @@ import ArchitectureModal from './architecture-modal';
 import { useUI } from '../context/ui-context.jsx';
 
 const NavLinks = [
-    { name: 'About', href: '#about' },
+    { name: 'Profile', href: '#about' },
     { name: 'Skills', href: '#skills' },
     { name: 'Projects', href: '#projects' },
     { name: 'Experience', href: '#experience' },
