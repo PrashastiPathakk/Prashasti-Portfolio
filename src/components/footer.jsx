@@ -5,36 +5,10 @@ import ArchModalTrigger from './arch-modal-trigger';
 
 export default function Footer() {
     return (
-        <footer className="border-t border-white/5 py-12 px-4 bg-background">
-            <div className="max-w-7xl mx-auto">
-                <div className="flex flex-col md:flex-row justify-between items-center gap-8 mb-12">
-                    <div className="flex flex-col gap-4">
-                        <div className="font-extrabold text-3xl uppercase tracking-tight gradient-text">Prashasti Pathak</div>
-                        <p className="text-foreground/40 max-w-xs text-xs uppercase font-bold tracking-widest leading-loose">
-                            Software Developer & SDE Intern
-                        </p>
-                    </div>
-
-                    <div className="flex gap-4 items-center">
-                        <Link href="https://github.com/PrashastiPathakk" target="_blank" className="p-4 bg-foreground/5 border border-white/5 text-foreground/40 hover:text-primary transition-all">
-                            <Github size={18} />
-                        </Link>
-                        <Link href="https://www.linkedin.com/in/prashastipathakk" target="_blank" className="p-4 bg-foreground/5 border border-white/5 text-foreground/40 hover:text-primary transition-all">
-                            <Linkedin size={18} />
-                        </Link>
-                        <Link href="mailto:prashastipathak1@gmail.com" className="p-4 bg-foreground/5 border border-white/5 text-foreground/40 hover:text-primary transition-all">
-                            <Mail size={18} />
-                        </Link>
-                    </div>
-                </div>
-
-                <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-white/5 gap-6">
-                    <div className="flex items-center gap-4 text-[10px] uppercase font-bold tracking-widest text-foreground/30 leading-loose">
-                        <span>&copy; {new Date().getFullYear()} PRASHASTI PATHAK. ALL RIGHTS RESERVED.</span>
-                        <ArchModalTrigger />
-                    </div>
-
-                    <GithubActivity />
+        <footer className="bg-[#050505] py-16 px-4 border-t border-white/5">
+            <div className="max-w-4xl mx-auto text-center space-y-6">
+                <div className="text-white/40 text-sm font-medium tracking-wide">
+                    Copyright ©{new Date().getFullYear()} All rights reserved | ❤️ by Prashasti Pathak
                 </div>
             </div>
         </footer>
