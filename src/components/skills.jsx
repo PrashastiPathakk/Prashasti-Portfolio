@@ -154,15 +154,14 @@ export default function Skills() {
                             </motion.div>
                         </div>
                     </div>
-
-                    {/* Section 2: Backend Engineering Principles (Image 697 Match) */}
+                    {/* Section 2: Backend Foundations (Image 697 Match Refined) */}
                     <div className="pt-40 space-y-24 text-center">
                         <div className="space-y-6 max-w-4xl mx-auto">
                             <h3 className="text-5xl md:text-7xl font-black text-white leading-none tracking-tighter uppercase italic">
                                 BACKEND <span className="text-primary">FOUNDATIONS.</span>
                             </h3>
-                            <p className="text-lg text-foreground/60 leading-relaxed font-medium uppercase tracking-widest text-[11px]">
-                                I focus on building maintainable backend systems using proven engineering patterns and scalable API design.
+                            <p className="text-lg text-foreground/60 leading-relaxed font-black uppercase tracking-[0.4em] text-[10px]">
+                                Coordinating complex system architectures with precision and scalability.
                             </p>
                         </div>
 
@@ -170,12 +169,12 @@ export default function Skills() {
                             {[
                                 { title: 'REST API DESIGN', icon: <Code size={24} /> },
                                 { title: 'MVC ARCHITECTURE', icon: <Layers size={24} /> },
-                                { title: 'JWT AUTHENTICATION', icon: <Settings size={24} /> },
-                                { title: 'SECURE API DESIGN', icon: <Shield size={22} /> },
                                 { title: 'DATABASE SCHEMA DESIGN', icon: <Database size={22} /> },
-                                { title: 'ERROR HANDLING & LOGGING', icon: <Terminal size={22} /> },
-                                { title: 'API RATE LIMITING', icon: <Activity size={22} /> },
+                                { title: 'JWT AUTHENTICATION', icon: <Settings size={24} /> },
                                 { title: 'CLEAN BACKEND ARCHITECTURE', icon: <Layers size={22} /> },
+                                { title: 'SECURE API DESIGN', icon: <Shield size={22} /> },
+                                { title: 'ERROR HANDLING & LOGGING', icon: <Terminal size={22} /> },
+                                { title: 'SYSTEM SCALABILITY.', icon: <Activity size={22} /> },
                             ].map((principle, index) => (
                                 <motion.div
                                     key={principle.title}
@@ -196,14 +195,14 @@ export default function Skills() {
                         </div>
                     </div>
 
-                    {/* Section 3: Technical Excellence (Image 698 Match) */}
+                    {/* Section 3: Technical Scope (Image 698 Match Refined) */}
                     <div className="pt-40 space-y-24 text-center">
                         <div className="space-y-6 max-w-4xl mx-auto">
                             <h3 className="text-5xl md:text-7xl font-black text-white leading-none tracking-tighter uppercase italic">
                                 TECHNICAL <span className="text-primary">SCOPE.</span>
                             </h3>
-                            <p className="text-lg text-foreground/60 leading-relaxed font-medium uppercase tracking-widest text-[11px]">
-                                A modern stack designed for performance, security, and scalability.
+                            <p className="text-lg text-foreground/60 leading-relaxed font-black uppercase tracking-[0.4em] text-[10px]">
+                                A comprehensive technology stack engineered for modern production environments.
                             </p>
                         </div>
 
