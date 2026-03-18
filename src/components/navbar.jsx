@@ -5,6 +5,7 @@ import { useTheme } from 'next-themes';
 import { Moon, Sun, Menu, X, Github, Linkedin, Cpu } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 import ArchitectureModal from './architecture-modal';
 import { useUI } from '../context/ui-context.jsx';
 
@@ -22,10 +23,15 @@ export default function Navbar() {
     const { theme, setTheme } = useTheme();
     const [isOpen, setIsOpen] = useState(false);
     const { isArchModalOpen, openArchModal, closeArchModal } = useUI();
+    const [scrolled, setScrolled] = useState(false);
 
     useEffect(() => {
-        // eslint-disable-next-line react-hooks/set-state-in-effect
         setMounted(true);
+        const handleNavbarScroll = () => {
+            setScrolled(window.scrollY > 150);
+        };
+        window.addEventListener('scroll', handleNavbarScroll);
+        return () => window.removeEventListener('scroll', handleNavbarScroll);
     }, []);
 
     const handleScroll = (e, href) => {
@@ -92,10 +98,31 @@ export default function Navbar() {
                                 whileHover={{ scale: 1.1, rotate: 15 }}
                                 whileTap={{ scale: 0.9 }}
                                 onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-                                className="p-2 rounded-lg bg-primary/10 text-primary hover:bg-primary/20 transition-all"
+                                className="p-2 rounded-lg bg-primary/10 text-primary hover:bg-primary/20 transition-all mr-4"
                             >
                                 {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
                             </motion.button>
+
+                            <AnimatePresence>
+                                {scrolled && (
+                                    <motion.div
+                                        layoutId="hero-profile-pic"
+                                        className="w-10 h-10 rounded-full border-2 border-primary/50 overflow-hidden shadow-lg cursor-pointer shrink-0"
+                                        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                                        initial={{ opacity: 0, scale: 0.5 }}
+                                        animate={{ opacity: 1, scale: 1 }}
+                                        exit={{ opacity: 0, scale: 0.5 }}
+                                    >
+                                        <Image
+                                            src="/profile.png"
+                                            alt="Profile"
+                                            width={40}
+                                            height={40}
+                                            className="w-full h-full object-cover"
+                                        />
+                                    </motion.div>
+                                )}
+                            </AnimatePresence>
                         </div>
                     </div>
 
@@ -112,6 +139,25 @@ export default function Navbar() {
                         >
                             {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
                         </button>
+                        <AnimatePresence mode="wait">
+                            {scrolled && (
+                                <motion.div
+                                    layoutId="hero-profile-pic-mobile"
+                                    className="w-8 h-8 rounded-full border-2 border-primary/50 overflow-hidden shadow-lg"
+                                    initial={{ opacity: 0, scale: 0.5 }}
+                                    animate={{ opacity: 1, scale: 1 }}
+                                    exit={{ opacity: 0, scale: 0.5 }}
+                                >
+                                    <Image
+                                        src="/profile.png"
+                                        alt="Profile"
+                                        width={32}
+                                        height={32}
+                                        className="w-full h-full object-cover"
+                                    />
+                                </motion.div>
+                            )}
+                        </AnimatePresence>
                         <button
                             onClick={() => setIsOpen(!isOpen)}
                             className="p-2 rounded-md text-primary"

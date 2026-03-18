@@ -16,15 +16,12 @@ export default function About() {
                         About
                     </h2>
 
-                    <div className="space-y-4 text-foreground/80 leading-relaxed">
+                    <div className="space-y-6 text-foreground/80 leading-relaxed text-lg">
                         <p>
-                            I am a final-year Computer Science student and Software Developer Intern at JBH Tech Innovation, where I contribute to the development of production-grade software systems.
+                            I&apos;m a final-year Computer Science student and SDE Intern at JBH Tech Innovation, building and delivering production-grade backend systems.
                         </p>
                         <p>
-                            My focus lies in architecting applications that balance technical robustness with practical utility — ranging from comprehensive full-stack platforms to optimized algorithmic tools.
-                        </p>
-                        <p>
-                            I prioritize long-term maintainability and performance, ensuring that every project delivers measurable value through engineered excellence.
+                            My focus is on designing systems that remain stable under real-world load and scale seamlessly over time. I don&apos;t just aim for functionality — I build solutions that are reliable, efficient, and engineered for long-term performance.
                         </p>
                     </div>
 

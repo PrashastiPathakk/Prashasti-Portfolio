@@ -1,10 +1,14 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import { ChevronRight, Download } from 'lucide-react';
 import Image from 'next/image';
+import { useState, useEffect } from 'react';
 
 export default function Hero() {
+    const { scrollY } = useScroll();
+    const opacity = useTransform(scrollY, [0, 200], [1, 0]);
+
     return (
         <section id="hero" className="min-h-[90vh] flex flex-col items-center justify-center px-4 pt-32 lg:pt-32 relative overflow-hidden">
             {/* Background Gradients */}
@@ -28,15 +32,23 @@ export default function Hero() {
                         Available for Internships & Full-Time Roles
                     </motion.span>
 
-                    <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6">
-                        <span className="text-3xl md:text-5xl block mb-2 text-foreground/80">Hi, I&apos;m <span className="text-primary">Prashasti Pathak</span></span>
-                        Building robust, scalable, and <span className="gradient-text">user-centric software solutions.</span>
-                        <br />
-                        <span className="text-foreground/50 text-3xl md:text-5xl">Full-Stack Development. Architectural Excellence.</span>
+                    <div className="mb-4">
+                        <motion.span
+                            initial={{ opacity: 0, y: 10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.1 }}
+                            className="text-primary text-lg font-bold tracking-widest uppercase"
+                        >
+                            Hi, I&apos;m Prashasti Pathak
+                        </motion.span>
+                    </div>
+
+                    <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
+                        Building robust, scalable, and <span className="gradient-text">user-centric solutions.</span>
                     </h1>
 
-                    <p className="text-lg md:text-xl text-foreground/70 mb-10 leading-relaxed max-w-xl">
-                        Final-year Computer Science student and Software Developer Intern at JBH Tech Innovation — focused on architecting production-grade applications with modern technologies.
+                    <p className="text-base md:text-lg text-foreground/70 mb-10 leading-relaxed max-w-2xl">
+                        Full-Stack Developer focused on architecting production-grade applications — currently an SDE Intern at JBH Tech Innovation.
                     </p>
 
                     <div className="flex flex-col sm:flex-row items-center gap-4 mb-12">
@@ -67,8 +79,8 @@ export default function Hero() {
                             { value: "2+", label: "Years of Development" }
                         ].map((stat, i) => (
                             <div key={i}>
-                                <div className="text-3xl font-bold text-primary mb-1">{stat.value}</div>
-                                <div className="text-[10px] uppercase tracking-widest font-bold text-foreground/40 leading-tight">
+                                <div className="text-2xl font-bold text-primary mb-1">{stat.value}</div>
+                                <div className="text-[11px] uppercase tracking-widest font-bold text-foreground/40 leading-tight">
                                     {stat.label}
                                 </div>
                             </div>
@@ -81,9 +93,13 @@ export default function Hero() {
                     initial={{ opacity: 0, scale: 0.9, x: 30 }}
                     animate={{ opacity: 1, scale: 1, x: 0 }}
                     transition={{ duration: 0.8, delay: 0.1 }}
+                    style={{ opacity }}
                     className="relative block"
                 >
-                    <div className="aspect-4/5 max-w-[450px] mx-auto rounded-[3rem] border border-white/10 glass dark:glass-dark overflow-hidden relative group shadow-2xl">
+                    <motion.div 
+                        layoutId="hero-profile-pic"
+                        className="aspect-4/5 max-w-[450px] mx-auto rounded-[3rem] border border-white/10 glass dark:glass-dark overflow-hidden relative group shadow-2xl"
+                    >
                         <Image
                             src="/profile.png"
                             alt="Prashasti Pathak — Software Developer"
@@ -93,7 +109,7 @@ export default function Hero() {
                             className="w-full h-full object-cover grayscale brightness-110 contrast-110 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 ease-out"
                         />
                         <div className="absolute inset-0 bg-linear-to-t from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-                    </div>
+                    </motion.div>
                 </motion.div>
             </div>
 
