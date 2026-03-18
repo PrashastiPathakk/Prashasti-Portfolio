@@ -50,127 +50,109 @@ export default function Skills() {
     return (
         <section id="skills" className="py-32 relative overflow-hidden">
             <div className="container mx-auto px-6 relative z-10">
-                <div className="space-y-40">
-                    {/* Header: Technical Excellence (Visual Match Image 397) */}
-                    <div className="space-y-6">
-                        <div className="space-y-0">
-                            <motion.h2 
-                                initial={{ opacity: 0, x: -20 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                viewport={{ once: true }}
-                                className="text-6xl md:text-9xl font-black italic tracking-tighter leading-[0.85] uppercase text-white"
-                            >
-                                SKILLS
-                            </motion.h2>
-
+                <div className="space-y-32">
+                    {/* Header: Core Stack (Image 670 Match) */}
+                    <div className="space-y-12">
+                        <div className="flex items-center gap-3">
+                            <span className="text-[11px] font-black text-primary uppercase tracking-[0.4em]">CORE STACK.</span>
                         </div>
-
-
-                    </div>
-
-                    {/* Mastery Board (The Charts) + Profile Summary (Image 469) */}
-                    <div className="grid lg:grid-cols-[1fr_480px] gap-20 items-start">
-                        {/* Left: Skill Bars */}
-                        <div className="space-y-20">
-                            {[
-                                { name: 'JAVASCRIPT', level: 'SENIOR_LEVEL', percentage: 98 },
-                                { name: 'NODE.JS', level: 'ARCHITECTURE', percentage: 85 },
-                                { name: 'EXPRESS.JS', level: 'BACKEND_CORE', percentage: 85 },
-                                { name: 'REST APIS', level: 'OPTIMIZATION', percentage: 92 },
-                                { name: 'MONGODB', level: 'DATABASE_LEAD', percentage: 80 },
-                                { name: 'POSTGRESQL', level: 'RELATIONAL_ARCH', percentage: 80 },
-                            ].map((skill, index) => (
-                                <motion.div 
-                                    key={skill.name}
-                                    initial={{ opacity: 0, y: 10 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    viewport={{ once: true }}
-                                    transition={{ delay: index * 0.05 }}
-                                    className="group relative"
-                                >
-                                    <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-5">
-                                        <div className="flex items-baseline gap-4">
-                                            <span className="text-5xl md:text-6xl font-black italic tracking-tighter uppercase text-white group-hover:text-primary transition-all duration-500 leading-none">
-                                                {skill.name}
-                                            </span>
-                                            <span className="text-[10px] md:text-xs font-black text-primary/50 group-hover:text-primary transition-colors">
-                                                [{skill.percentage}%]
-                                            </span>
-                                        </div>
-
-                                        <div className="flex flex-col items-start md:items-end">
-                                            <span className="text-[9px] font-black text-foreground/30 uppercase tracking-[0.4em] mb-1">Status</span>
-                                            <span className="text-xs font-black text-primary uppercase tracking-[0.15em]">
+                        
+                        <div className="grid lg:grid-cols-[1fr_480px] gap-20 items-start">
+                            {/* Left: Skill Bars (Mastery Board) */}
+                            <div className="space-y-12">
+                                {[
+                                    { name: 'JAVASCRIPT', level: 'EXPERT', percentage: 80 },
+                                    { name: 'NODE.JS', level: 'EXPERT', percentage: 85 },
+                                    { name: 'EXPRESS.JS', level: 'PROFICIENT', percentage: 85 },
+                                    { name: 'MONGODB', level: 'PROFICIENT', percentage: 80 },
+                                    { name: 'POSTGRESQL', level: 'PROFICIENT', percentage: 80 },
+                                    { name: 'REST API DESIGN', level: 'PROFICIENT', percentage: 85 },
+                                ].map((skill, index) => (
+                                    <motion.div 
+                                        key={skill.name}
+                                        initial={{ opacity: 0, y: 10 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        viewport={{ once: true }}
+                                        transition={{ delay: index * 0.05 }}
+                                        className="group"
+                                    >
+                                        <div className="flex items-end justify-between mb-2">
+                                            <div className="flex items-baseline gap-3">
+                                                <span className="text-4xl font-black italic tracking-tighter uppercase text-white leading-none">
+                                                    {skill.name}
+                                                </span>
+                                                <span className="text-[10px] font-black text-primary/60">
+                                                    {skill.percentage}%
+                                                </span>
+                                            </div>
+                                            <span className="text-[11px] font-black text-white uppercase tracking-[0.1em]">
                                                 {skill.level}
                                             </span>
                                         </div>
-                                    </div>
-                                    
-                                    <div className="h-[1.5px] w-full bg-foreground/5 relative">
-                                        <motion.div
-                                            initial={{ width: 0 }}
-                                            whileInView={{ width: `${skill.percentage}%` }}
-                                            viewport={{ once: true }}
-                                            transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
-                                            className="absolute inset-y-0 left-0 bg-primary shadow-[0_0_20px_rgba(var(--primary-rgb),0.4)]"
-                                        />
-                                    </div>
-                                </motion.div>
-                            ))}
-                        </div>
-
-                        {/* Right: Profile Summary Card (Image 469 Match Refined) */}
-                        <motion.div
-                            initial={{ opacity: 0, x: 20 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            className="bg-[#1A1D24] rounded-[3rem] border border-white/10 p-14 h-full shadow-4xl relative overflow-hidden group"
-                        >
-                            {/* Background Chip Icon */}
-                            <div className="absolute top-12 right-12 opacity-[0.03] group-hover:opacity-[0.1] transition-opacity duration-1000 rotate-12">
-                                <Cpu size={160} strokeWidth={1} />
+                                        
+                                        <div className="h-[2px] w-full bg-white/5 relative">
+                                            <motion.div
+                                                initial={{ width: 0 }}
+                                                whileInView={{ width: `${skill.percentage}%` }}
+                                                viewport={{ once: true }}
+                                                transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
+                                                className="absolute inset-y-0 left-0 bg-primary"
+                                            />
+                                        </div>
+                                    </motion.div>
+                                ))}
                             </div>
 
-                            <div className="space-y-12 relative z-10">
-                                <div className="space-y-10">
-                                    {[
-                                        { label: 'PROFILE:', value: 'Backend Engineer & SDE Intern' },
-                                        { label: 'DOMAIN:', value: 'Scalable Systems, REST APIs, Distributed Logic' },
-                                        { label: 'EDUCATION:', value: 'Final Year — Bachelor of Computer Science' },
-                                        { label: 'LOCATION:', value: 'Active SDE Intern @ JBH Tech Innovation' },
-                                    ].map((item) => (
-                                        <div key={item.label} className="grid grid-cols-[130px_1fr] items-start gap-6">
-                                            <span className="text-[11px] font-black text-primary/90 uppercase tracking-[0.2em] pt-1">{item.label}</span>
-                                            <span className="text-base font-black text-white leading-tight uppercase tracking-tight">{item.value}</span>
-                                        </div>
-                                    ))}
+                            {/* Right: Profile Summary Card (Image 670 / 469 Match) */}
+                            <motion.div
+                                initial={{ opacity: 0, x: 20 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true }}
+                                className="bg-[#1A1D24] rounded-[3rem] p-16 h-full shadow-4xl relative overflow-hidden group border border-white/5"
+                            >
+                                {/* Background Chip Icon */}
+                                <div className="absolute top-12 right-12 opacity-[0.03] group-hover:opacity-[0.1] transition-opacity duration-1000 rotate-12">
+                                    <Cpu size={140} strokeWidth={1} />
                                 </div>
 
-                                <div className="h-[1px] w-full bg-white/10" />
-
-                                <div className="grid grid-cols-[130px_1fr] items-start gap-6 pt-2">
-                                    <span className="text-[11px] font-black text-primary/70 uppercase tracking-[0.2em] pt-2">TECH FOCUS:</span>
-                                    <p className="text-2xl font-black italic text-white tracking-tighter leading-[1.1] uppercase">
-                                        &quot;BUILDING SYSTEMS THAT HOLD UP UNDER PRESSURE AND STAY FAST AT SCALE.&quot;
-                                    </p>
-                                </div>
-
-                                {/* Modern Project Indicator: Glowing Blocks (Replacing Rings) */}
-                                <div className="flex items-center gap-8 pt-10">
-                                    <div className="flex gap-2">
-                                        {[0, 1, 2, 3].map((i) => (
-                                            <div key={i} className="w-8 h-8 bg-primary/20 border border-primary/40 rounded-sm shadow-[0_0_15px_rgba(var(--primary-rgb),0.2)] animate-pulse" 
-                                                 style={{ animationDelay: `${i * 0.2}s` }} />
+                                <div className="space-y-12 relative z-10">
+                                    <div className="space-y-10">
+                                        {[
+                                            { label: 'PROFILE:', value: 'Backend Engineer & SDE Intern' },
+                                            { label: 'DOMAIN:', value: 'Scalable Systems, REST APIs, Distributed Logic' },
+                                            { label: 'EDUCATION:', value: 'Final Year — Bachelor of Computer Science' },
+                                            { label: 'LOCATION:', value: 'Active SDE Intern @ JBH Tech Innovation' },
+                                        ].map((item) => (
+                                            <div key={item.label} className="grid grid-cols-[120px_1fr] items-start gap-6">
+                                                <span className="text-[10px] font-black text-primary uppercase tracking-widest pt-1">{item.label}</span>
+                                                <span className="text-base font-bold text-white leading-tight uppercase tracking-tight">{item.value}</span>
+                                            </div>
                                         ))}
                                     </div>
-                                    <div className="space-y-1">
-                                        <span className="text-sm font-black uppercase tracking-[0.2em] text-white leading-none block">
+
+                                    <div className="h-[1px] w-full bg-white/5" />
+
+                                    <div className="grid grid-cols-[120px_1fr] items-start gap-6">
+                                        <span className="text-[10px] font-black text-primary/60 uppercase tracking-widest pt-1">TECH FOCUS:</span>
+                                        <p className="text-base font-medium text-white/90 leading-relaxed italic">
+                                            &quot;Building systems that hold up under pressure and stay fast at scale.&quot;
+                                        </p>
+                                    </div>
+
+                                    {/* Overlapping Circles (Rings) - Reverted from Blocks per Image 670 */}
+                                    <div className="flex items-center gap-8 pt-8">
+                                        <div className="flex -space-x-4">
+                                            {[0, 1, 2, 3].map((i) => (
+                                                <div key={i} className="w-12 h-12 rounded-full border-2 border-[#1A1D24] bg-primary/20 backdrop-blur-md shadow-xl" />
+                                            ))}
+                                        </div>
+                                        <span className="text-[11px] font-black uppercase tracking-[0.2em] text-white">
                                             4+ Live Production Projects
                                         </span>
                                     </div>
                                 </div>
-                            </div>
-                        </motion.div>
+                            </motion.div>
+                        </div>
                     </div>
 
                     {/* Section 2: Technical (Visual Match Image 443) */}
