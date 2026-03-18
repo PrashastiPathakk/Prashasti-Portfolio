@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Cpu, Code, Server, Database, Cloud, Layers, Settings } from 'lucide-react';
+import { Cpu, Code, Server, Database, Cloud, Layers, Settings, Shield, Terminal, Activity } from 'lucide-react';
 
 const skillCategories = [
     {
@@ -155,78 +155,89 @@ export default function Skills() {
                         </div>
                     </div>
 
-                    {/* Section 2: Technical (Visual Match Image 443) */}
-                    <div className="pt-40 space-y-20">
-                        <div className="flex items-center gap-4">
-                            <div className="h-[1px] w-12 bg-primary/40"></div>
-                            <span className="text-[10px] font-black text-primary uppercase tracking-[0.5em]">TECHNICAL.</span>
+                    {/* Section 2: Backend Engineering Principles (Image 697 Match) */}
+                    <div className="pt-40 space-y-24 text-center">
+                        <div className="space-y-6 max-w-3xl mx-auto">
+                            <h3 className="text-4xl md:text-5xl font-black text-white leading-tight">
+                                Backend Engineering <span className="text-primary italic">Principles.</span>
+                            </h3>
+                            <p className="text-lg text-foreground/60 leading-relaxed font-medium">
+                                I focus on building maintainable backend systems using proven engineering patterns and scalable API design.
+                            </p>
                         </div>
 
-                        <div className="grid lg:grid-cols-[1fr_420px] gap-24 items-start">
-                            {/* Expertise Domains Grid */}
-                            <div className="grid md:grid-cols-2 gap-x-20 gap-y-16">
-                                {skillCategories.map((category) => (
-                                    <div key={category.title} className="space-y-6">
-                                        <div className="flex items-center gap-3">
-                                            <div className="w-[1.5px] h-3 bg-primary"></div>
-                                            <h3 className="text-[11px] font-black uppercase tracking-[0.3em] text-white/90">{category.title}</h3>
-                                        </div>
-                                        <div className="flex flex-wrap gap-2.5">
-                                            {category.skills.map((s) => (
-                                                <span key={s} className="px-3.5 py-1.5 bg-[#121418] text-white/80 text-[10px] font-bold uppercase tracking-[0.1em] border border-white/5 hover:border-primary/40 transition-all rounded-sm">
-                                                    {s}
-                                                </span>
-                                            ))}
-                                        </div>
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                            {[
+                                { title: 'REST API DESIGN', icon: <Code size={24} /> },
+                                { title: 'MVC ARCHITECTURE', icon: <Layers size={24} /> },
+                                { title: 'JWT AUTHENTICATION', icon: <Settings size={24} /> },
+                                { title: 'SECURE API DESIGN', icon: <Shield size={22} /> },
+                                { title: 'DATABASE SCHEMA DESIGN', icon: <Database size={22} /> },
+                                { title: 'ERROR HANDLING & LOGGING', icon: <Terminal size={22} /> },
+                                { title: 'API RATE LIMITING', icon: <Activity size={22} /> },
+                                { title: 'CLEAN BACKEND ARCHITECTURE', icon: <Layers size={22} /> },
+                            ].map((principle, index) => (
+                                <motion.div
+                                    key={principle.title}
+                                    initial={{ opacity: 0, scale: 0.95 }}
+                                    whileInView={{ opacity: 1, scale: 1 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: index * 0.05 }}
+                                    className="bg-[#1A1D24] border border-white/5 rounded-3xl p-10 flex flex-col items-center justify-center gap-6 hover:border-primary/40 transition-all group aspect-square md:aspect-auto md:h-52"
+                                >
+                                    <div className="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center text-primary group-hover:bg-primary/10 transition-colors">
+                                        {principle.icon}
                                     </div>
-                                ))}
-                            </div>
+                                    <span className="text-[11px] font-black text-white/90 uppercase tracking-[0.2em] text-center leading-tight">
+                                        {principle.title}
+                                    </span>
+                                </motion.div>
+                            ))}
+                        </div>
+                    </div>
 
-                            {/* Refined Developer Profile Sidebar (Match Image 443) */}
-                            <div className="h-full">
-                                <div className="bg-[#121418] rounded-[2.5rem] border border-white/5 p-14 h-full shadow-2xl relative overflow-hidden group">
-                                    <div className="absolute inset-0 opacity-[0.02] pointer-events-none" 
-                                         style={{ backgroundImage: 'radial-gradient(circle, #fff 1px, transparent 1px)', backgroundSize: '24px 24px' }} />
+                    {/* Section 3: Technical Excellence (Image 698 Match) */}
+                    <div className="pt-40 space-y-24 text-center">
+                        <div className="space-y-6 max-w-2xl mx-auto">
+                            <h3 className="text-4xl md:text-5xl font-black text-white leading-tight">
+                                Technical <span className="text-primary italic">Excellence.</span>
+                            </h3>
+                            <p className="text-lg text-foreground/60 leading-relaxed font-medium">
+                                A modern stack designed for performance, security, and scalability.
+                            </p>
+                        </div>
 
-                                    <div className="space-y-14 relative z-10">
-                                        <div className="space-y-10">
-                                            <div className="space-y-2">
-                                                <span className="text-[9px] font-black text-primary uppercase tracking-[0.5em]">SYSTEM_IDENTITY</span>
-                                                <h4 className="text-3xl font-black text-white italic tracking-tighter uppercase leading-none italic">PRASHASTI PATHAK</h4>
-                                            </div>
-                                            
-                                            <div className="space-y-8 text-sm font-bold text-white/60 tracking-tighter leading-tight uppercase">
-                                                <div className="space-y-1">
-                                                    <div className="text-[9px] text-white/20 leading-none">Priority_Stream:</div>
-                                                    <div className="text-white/80">Backend Engineering & Distributed Systems</div>
-                                                </div>
-                                                <div className="flex flex-col gap-1">
-                                                    <span className="text-[9px] text-white/20 leading-none">Current_Status:</span>
-                                                    <span className="text-white/80 tracking-tighter">SDE Intern @ JBH Tech Innovation</span>
-                                                </div>
-                                            </div>
+                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            {skillCategories.map((category, index) => (
+                                <motion.div
+                                    key={category.title}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: index * 0.1 }}
+                                    className="bg-[#1A1D24] border border-white/5 rounded-[2.5rem] p-10 text-left space-y-10 hover:border-primary/20 transition-all group"
+                                >
+                                    <div className="flex items-center gap-4">
+                                        <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center text-primary group-hover:bg-primary/20 transition-all">
+                                            {category.icon}
                                         </div>
-
-                                        <div className="pt-14 border-t border-white/5 leading-tight">
-                                            <p className="text-2xl font-black italic text-white/5 transition-colors group-hover:text-primary/10 transition-colors duration-700 uppercase">
-                                                &quot;Architecture over code.&quot;
-                                            </p>
-                                        </div>
-
-                                        {/* Status Component: Compact Counter */}
-                                        <div className="flex items-center gap-6 pt-6">
-                                            <div className="relative w-14 h-14 flex items-center justify-center">
-                                                <div className="absolute inset-0 border border-primary/30 rounded-lg rotate-45 group-hover:rotate-90 transition-transform duration-700" />
-                                                <span className="text-2xl font-black text-primary italic">3+</span>
-                                            </div>
-                                            <div className="space-y-1">
-                                                <div className="text-[10px] font-black uppercase tracking-[0.3em] text-white">NODES_OPTIMIZED</div>
-                                                <div className="text-[9px] font-bold text-white/20 uppercase tracking-widest leading-none">STATUS: ACTIVE</div>
-                                            </div>
-                                        </div>
+                                        <h4 className="text-xl font-black text-white uppercase tracking-tight italic">
+                                            {category.title}
+                                        </h4>
                                     </div>
-                                </div>
-                            </div>
+
+                                    <div className="flex flex-wrap gap-2">
+                                        {category.skills.map((skill) => (
+                                            <span 
+                                                key={skill}
+                                                className="px-4 py-2 bg-black/20 border border-white/10 rounded-full text-xs font-bold text-white/70 hover:text-white hover:border-primary/40 transition-all"
+                                            >
+                                                {skill}
+                                            </span>
+                                        ))}
+                                    </div>
+                                </motion.div>
+                            ))}
                         </div>
                     </div>
                 </div>
