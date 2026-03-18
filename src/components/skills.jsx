@@ -48,16 +48,11 @@ const workingKnowledge = [
 
 export default function Skills() {
     return (
-        <section id="skills" className="py-32 relative overflow-hidden bg-[#0A0C10]">
+        <section id="skills" className="py-32 relative overflow-hidden">
             <div className="container mx-auto px-6 relative z-10">
                 <div className="space-y-40">
                     {/* Header: Technical Excellence (Visual Match Image 397) */}
                     <div className="space-y-6">
-                        <div className="flex items-center gap-4">
-                            <div className="h-[1px] w-16 bg-primary/40"></div>
-                            <span className="text-[10px] font-bold text-primary uppercase tracking-[0.4em]">SYSTEM_CAPABILITIES</span>
-                        </div>
-                        
                         <div className="space-y-0">
                             <motion.h2 
                                 initial={{ opacity: 0, x: -20 }}
@@ -78,9 +73,7 @@ export default function Skills() {
                             </motion.h2>
                         </div>
 
-                        <div className="pt-8">
-                            <span className="text-[11px] font-black text-white/90 tracking-[0.3em]">01 // PROFESSIONAL_MASTERIES</span>
-                        </div>
+
                     </div>
 
                     {/* Mastery Board (The Charts) + Profile Summary (Image 469) */}
@@ -182,7 +175,6 @@ export default function Skills() {
                                         <span className="text-sm font-black uppercase tracking-[0.2em] text-white leading-none block">
                                             4+ Live Production Projects
                                         </span>
-                                        <span className="text-[9px] font-bold text-white/20 uppercase tracking-[0.4em] leading-none">Status: Active_Nodes</span>
                                     </div>
                                 </div>
                             </div>
