@@ -16,13 +16,13 @@ export default function Contact() {
                         viewport={{ once: true }}
                         className="flex flex-col items-center space-y-8"
                     >
-                        <a href="tel:+917985209830" className="group flex flex-col items-center space-y-8">
+                        <a href="tel:+917460985381" className="group flex flex-col items-center space-y-8">
                             <div className="w-24 h-24 rounded-full bg-[#1A1A1A] flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
                                 <Phone size={32} strokeWidth={1.5} />
                             </div>
                             <div className="text-center space-y-4">
                                 <h4 className="text-sm font-black uppercase tracking-[0.2em] text-white/50">Contact Number</h4>
-                                <p className="text-2xl font-medium tracking-tight hover:text-primary transition-colors">+91 7985209830</p>
+                                <p className="text-2xl font-medium tracking-tight hover:text-primary transition-colors">+91 7460985381</p>
                             </div>
                         </a>
                     </motion.div>
