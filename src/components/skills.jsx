@@ -157,11 +157,11 @@ export default function Skills() {
 
                     {/* Section 2: Backend Engineering Principles (Image 697 Match) */}
                     <div className="pt-40 space-y-24 text-center">
-                        <div className="space-y-6 max-w-3xl mx-auto">
-                            <h3 className="text-4xl md:text-5xl font-black text-white leading-tight">
-                                Backend Engineering <span className="text-primary italic">Principles.</span>
+                        <div className="space-y-6 max-w-4xl mx-auto">
+                            <h3 className="text-5xl md:text-7xl font-black text-white leading-none tracking-tighter uppercase italic">
+                                ENGINEERING <span className="text-primary">PHILOSOPHY.</span>
                             </h3>
-                            <p className="text-lg text-foreground/60 leading-relaxed font-medium">
+                            <p className="text-lg text-foreground/60 leading-relaxed font-medium uppercase tracking-widest text-[11px]">
                                 I focus on building maintainable backend systems using proven engineering patterns and scalable API design.
                             </p>
                         </div>
@@ -198,11 +198,11 @@ export default function Skills() {
 
                     {/* Section 3: Technical Excellence (Image 698 Match) */}
                     <div className="pt-40 space-y-24 text-center">
-                        <div className="space-y-6 max-w-2xl mx-auto">
-                            <h3 className="text-4xl md:text-5xl font-black text-white leading-tight">
-                                Technical <span className="text-primary italic">Excellence.</span>
+                        <div className="space-y-6 max-w-4xl mx-auto">
+                            <h3 className="text-5xl md:text-7xl font-black text-white leading-none tracking-tighter uppercase italic">
+                                TECHNICAL <span className="text-primary">EXCELLENCE.</span>
                             </h3>
-                            <p className="text-lg text-foreground/60 leading-relaxed font-medium">
+                            <p className="text-lg text-foreground/60 leading-relaxed font-medium uppercase tracking-widest text-[11px]">
                                 A modern stack designed for performance, security, and scalability.
                             </p>
                         </div>
