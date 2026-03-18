@@ -38,7 +38,7 @@ const achievements = [
 
 export default function Experience() {
     return (
-        <section id="experience" className="py-24 px-4 bg-foreground/5">
+        <section id="experience" className="py-24 px-4 bg-[#050505]">
             <div className="max-w-7xl mx-auto">
                 <div className="grid lg:grid-cols-3 gap-16">
                     <div className="lg:col-span-2">

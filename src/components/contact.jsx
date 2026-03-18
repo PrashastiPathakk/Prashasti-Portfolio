@@ -16,13 +16,15 @@ export default function Contact() {
                         viewport={{ once: true }}
                         className="flex flex-col items-center space-y-8"
                     >
-                        <div className="w-24 h-24 rounded-full bg-[#1A1A1A] flex items-center justify-center text-primary">
-                            <Phone size={32} strokeWidth={1.5} />
-                        </div>
-                        <div className="text-center space-y-4">
-                            <h4 className="text-sm font-black uppercase tracking-[0.2em] text-white/50">Contact Number</h4>
-                            <p className="text-2xl font-medium tracking-tight">+91 7985209830</p>
-                        </div>
+                        <a href="tel:+917985209830" className="group flex flex-col items-center space-y-8">
+                            <div className="w-24 h-24 rounded-full bg-[#1A1A1A] flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+                                <Phone size={32} strokeWidth={1.5} />
+                            </div>
+                            <div className="text-center space-y-4">
+                                <h4 className="text-sm font-black uppercase tracking-[0.2em] text-white/50">Contact Number</h4>
+                                <p className="text-2xl font-medium tracking-tight hover:text-primary transition-colors">+91 7985209830</p>
+                            </div>
+                        </a>
                     </motion.div>
 
                     {/* Email */}
@@ -33,13 +35,15 @@ export default function Contact() {
                         transition={{ delay: 0.1 }}
                         className="flex flex-col items-center space-y-8"
                     >
-                        <div className="w-24 h-24 rounded-full bg-[#1A1A1A] flex items-center justify-center text-primary">
-                            <Send size={32} strokeWidth={1.5} />
-                        </div>
-                        <div className="text-center space-y-4">
-                            <h4 className="text-sm font-black uppercase tracking-[0.2em] text-white/50">Email Address</h4>
-                            <p className="text-2xl font-medium tracking-tight">prashastipathak1@gmail.com</p>
-                        </div>
+                        <a href="mailto:prashastipathak1@gmail.com" className="group flex flex-col items-center space-y-8">
+                            <div className="w-24 h-24 rounded-full bg-[#1A1A1A] flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+                                <Send size={32} strokeWidth={1.5} />
+                            </div>
+                            <div className="text-center space-y-4">
+                                <h4 className="text-sm font-black uppercase tracking-[0.2em] text-white/50">Email Address</h4>
+                                <p className="text-2xl font-medium tracking-tight hover:text-primary transition-colors">prashastipathak1@gmail.com</p>
+                            </div>
+                        </a>
                     </motion.div>
 
                     {/* Resume */}
@@ -50,13 +54,15 @@ export default function Contact() {
                         transition={{ delay: 0.2 }}
                         className="flex flex-col items-center space-y-8"
                     >
-                        <div className="w-24 h-24 rounded-full bg-[#1A1A1A] flex items-center justify-center text-primary">
-                            <Globe size={32} strokeWidth={1.5} />
-                        </div>
-                        <div className="text-center space-y-4">
-                            <h4 className="text-sm font-black uppercase tracking-[0.2em] text-white/50">Download Resume</h4>
-                            <a href="#" className="text-2xl font-medium tracking-tight hover:text-primary transition-colors">resumelink</a>
-                        </div>
+                        <a href="#" className="group flex flex-col items-center space-y-8">
+                            <div className="w-24 h-24 rounded-full bg-[#1A1A1A] flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+                                <Globe size={32} strokeWidth={1.5} />
+                            </div>
+                            <div className="text-center space-y-4">
+                                <h4 className="text-sm font-black uppercase tracking-[0.2em] text-white/50">Download Resume</h4>
+                                <p className="text-2xl font-medium tracking-tight hover:text-primary transition-colors">resumelink</p>
+                            </div>
+                        </a>
                     </motion.div>
                 </div>
 
@@ -70,13 +76,15 @@ export default function Contact() {
                     <h2 className="text-4xl md:text-6xl font-medium tracking-tight leading-tight">
                         Have a Hiring or<br />Question?
                     </h2>
-                    <motion.button
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        className="px-16 py-6 bg-primary text-black text-sm font-black uppercase tracking-[0.3em] rounded-full hover:opacity-90 transition-all shadow-[0_0_30px_rgba(255,180,0,0.2)]"
-                    >
-                        Click Here
-                    </motion.button>
+                    <a href="mailto:prashastipathak1@gmail.com" className="inline-block">
+                        <motion.button
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            className="px-16 py-6 bg-primary text-black text-sm font-black uppercase tracking-[0.3em] rounded-full hover:opacity-90 transition-all shadow-[0_0_30px_rgba(255,180,0,0.2)]"
+                        >
+                            Click Here
+                        </motion.button>
+                    </a>
                 </motion.div>
 
                 {/* Social Bar */}
