@@ -182,25 +182,21 @@ export default function Skills() {
                                     <div className="space-y-10 relative z-10">
                                         <div className="space-y-6">
                                             <div className="space-y-1">
-                                                <span className="text-[10px] font-black text-primary uppercase tracking-[0.4em]">Engineered_By</span>
+                                                <span className="text-[10px] font-black text-primary uppercase tracking-[0.4em]">Developer Profile</span>
                                                 <h4 className="text-xl font-black text-foreground italic tracking-tighter">PRASHASTI PATHAK</h4>
                                             </div>
                                             
                                             <div className="space-y-4">
                                                 <div className="flex flex-col">
-                                                    <span className="text-[9px] font-bold text-foreground/30 uppercase tracking-widest">Current Position</span>
-                                                    <span className="text-sm font-bold text-foreground/80 lowercase">backend engineer & sde intern</span>
-                                                </div>
-                                                <div className="flex flex-col">
-                                                    <span className="text-[9px] font-bold text-foreground/30 uppercase tracking-widest">Industry Focus</span>
-                                                    <span className="text-sm font-bold text-foreground/80 tracking-tight">Scalable Systems & Distributed APIs</span>
+                                                    <span className="text-[9px] font-bold text-foreground/30 uppercase tracking-widest leading-none mb-1">Current Role</span>
+                                                    <span className="text-sm font-bold text-foreground/80">Backend Engineer & SDE Intern</span>
                                                 </div>
                                             </div>
                                         </div>
 
                                         <div className="pt-8 border-t border-white/5 leading-tight">
                                             <p className="text-xl font-black italic text-foreground/20 group-hover:text-foreground/80 transition-colors duration-700">
-                                                &quot;solutions that remain stable under real-world load.&quot;
+                                                &quot;Engineering systems that remain stable under real-world load.&quot;
                                             </p>
                                         </div>
 
@@ -222,7 +218,7 @@ export default function Skills() {
                                             </div>
                                             <div className="flex flex-col">
                                                 <span className="text-[10px] font-black uppercase tracking-[0.3em] text-foreground/90 leading-none">Live Projects</span>
-                                                <span className="text-[9px] font-bold text-foreground/30 uppercase mt-1">Production Grade</span>
+                                                <span className="text-[9px] font-bold text-foreground/30 uppercase mt-1">Production-Grade Systems</span>
                                             </div>
                                         </div>
                                     </div>
@@ -233,7 +229,7 @@ export default function Skills() {
                                     <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-20 transition-opacity">
                                         <Cpu size={40} />
                                     </div>
-                                    <span className="text-[9px] font-black text-primary uppercase tracking-[0.4em] mb-6 block">Foundation_Tags</span>
+                                    <span className="text-[9px] font-black text-primary uppercase tracking-[0.4em] mb-6 block">Core Competencies</span>
                                     <div className="flex flex-wrap gap-2">
                                         {workingKnowledge.map((tag) => (
                                             <span key={tag} className="text-[9px] font-bold text-foreground/40 uppercase tracking-widest px-3 py-1.5 bg-foreground/5 rounded-lg border border-white/5 hover:border-accent/40 hover:text-foreground transition-all">
