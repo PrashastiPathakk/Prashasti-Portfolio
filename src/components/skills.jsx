@@ -83,9 +83,10 @@ export default function Skills() {
                         </div>
                     </div>
 
-                    {/* Mastery Board (The Charts) */}
-                    <div className="max-w-6xl space-y-24">
-                        <div className="grid gap-20">
+                    {/* Mastery Board (The Charts) + Profile Summary (Image 469) */}
+                    <div className="grid lg:grid-cols-[1fr_480px] gap-20 items-start">
+                        {/* Left: Skill Bars */}
+                        <div className="space-y-20">
                             {[
                                 { name: 'JAVASCRIPT', level: 'SENIOR_LEVEL', percentage: 98 },
                                 { name: 'NODE.JS', level: 'ARCHITECTURE', percentage: 85 },
@@ -104,7 +105,7 @@ export default function Skills() {
                                 >
                                     <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-5">
                                         <div className="flex items-baseline gap-4">
-                                            <span className="text-5xl md:text-7xl font-black italic tracking-tighter uppercase text-white group-hover:text-primary transition-all duration-500 leading-none">
+                                            <span className="text-5xl md:text-6xl font-black italic tracking-tighter uppercase text-white group-hover:text-primary transition-all duration-500 leading-none">
                                                 {skill.name}
                                             </span>
                                             <span className="text-[10px] md:text-xs font-black text-primary/50 group-hover:text-primary transition-colors">
@@ -132,6 +133,56 @@ export default function Skills() {
                                 </motion.div>
                             ))}
                         </div>
+
+                        {/* Right: Profile Summary Card (Image 469 Match) */}
+                        <motion.div
+                            initial={{ opacity: 0, x: 20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            className="bg-[#1A1D24] rounded-[2.5rem] border border-white/5 p-12 shadow-3xl relative overflow-hidden group"
+                        >
+                            {/* Background Chip Icon */}
+                            <div className="absolute top-12 right-12 opacity-[0.03] group-hover:opacity-[0.1] transition-opacity duration-1000 rotate-12">
+                                <Cpu size={140} strokeWidth={1} />
+                            </div>
+
+                            <div className="space-y-10 relative z-10">
+                                <div className="space-y-8">
+                                    {[
+                                        { label: 'PROFILE:', value: 'Backend Engineer & SDE Intern' },
+                                        { label: 'DOMAIN:', value: 'Scalable Systems, REST APIs, Distributed Logic' },
+                                        { label: 'EDUCATION:', value: 'Final Year — Bachelor of Computer Science' },
+                                        { label: 'LOCATION:', value: 'Active SDE Intern @ JBH Tech Innovation' },
+                                    ].map((item) => (
+                                        <div key={item.label} className="grid grid-cols-[110px_1fr] items-start gap-4">
+                                            <span className="text-[10px] font-black text-primary uppercase tracking-widest">{item.label}</span>
+                                            <span className="text-sm font-bold text-white/90 leading-tight">{item.value}</span>
+                                        </div>
+                                    ))}
+                                </div>
+
+                                <div className="h-[1px] w-full bg-white/5" />
+
+                                <div className="grid grid-cols-[110px_1fr] items-start gap-4">
+                                    <span className="text-[10px] font-black text-primary/60 uppercase tracking-widest pt-1">TECH FOCUS:</span>
+                                    <p className="text-lg font-black italic text-white/90 tracking-tight leading-tight uppercase">
+                                        &quot;Building systems that hold up under pressure and stay fast at scale.&quot;
+                                    </p>
+                                </div>
+
+                                {/* Overlapping Circles + Text */}
+                                <div className="flex items-center gap-6 pt-6">
+                                    <div className="flex -space-x-3">
+                                        {[0, 1, 2, 3].map((i) => (
+                                            <div key={i} className="w-9 h-9 rounded-full border-2 border-[#1A1D24] bg-primary/20 backdrop-blur-sm" />
+                                        ))}
+                                    </div>
+                                    <span className="text-[11px] font-black uppercase tracking-[0.2em] text-white/95 leading-none">
+                                        3+ Live Production Projects
+                                    </span>
+                                </div>
+                            </div>
+                        </motion.div>
                     </div>
 
                     {/* Section 2: Technical (Visual Match Image 443) */}
@@ -162,7 +213,7 @@ export default function Skills() {
                             </div>
 
                             {/* Refined Developer Profile Sidebar (Match Image 443) */}
-                            <div className="lg:sticky lg:top-32 h-full">
+                            <div className="h-full">
                                 <div className="bg-[#121418] rounded-[2.5rem] border border-white/5 p-14 h-full shadow-2xl relative overflow-hidden group">
                                     <div className="absolute inset-0 opacity-[0.02] pointer-events-none" 
                                          style={{ backgroundImage: 'radial-gradient(circle, #fff 1px, transparent 1px)', backgroundSize: '24px 24px' }} />
@@ -171,24 +222,24 @@ export default function Skills() {
                                         <div className="space-y-10">
                                             <div className="space-y-2">
                                                 <span className="text-[9px] font-black text-primary uppercase tracking-[0.5em]">SYSTEM_IDENTITY</span>
-                                                <h4 className="text-3xl font-black text-white italic tracking-tighter uppercase leading-none">PRASHASTI PATHAK</h4>
+                                                <h4 className="text-3xl font-black text-white italic tracking-tighter uppercase leading-none italic">PRASHASTI PATHAK</h4>
                                             </div>
                                             
-                                            <div className="space-y-8">
-                                                <div className="flex flex-col">
-                                                    <span className="text-[9px] font-black text-white/20 uppercase tracking-[0.3em] mb-2 leading-none">CORE_DESIGNATION</span>
-                                                    <span className="text-sm font-bold text-white/80 uppercase tracking-tighter">Backend Engineer & SDE Intern</span>
+                                            <div className="space-y-8 text-sm font-bold text-white/60 tracking-tighter leading-tight uppercase">
+                                                <div className="space-y-1">
+                                                    <div className="text-[9px] text-white/20 leading-none">Priority_Stream:</div>
+                                                    <div className="text-white/80">Backend Engineering & Distributed Systems</div>
                                                 </div>
-                                                <div className="flex flex-col">
-                                                    <span className="text-[9px] font-black text-white/20 uppercase tracking-[0.3em] mb-2 leading-none">CURRENT_PRIORITY</span>
-                                                    <span className="text-sm font-bold text-white/80 uppercase tracking-tighter">Scalable Systems Architecture</span>
+                                                <div className="flex flex-col gap-1">
+                                                    <span className="text-[9px] text-white/20 leading-none">Current_Status:</span>
+                                                    <span className="text-white/80 tracking-tighter">SDE Intern @ JBH Tech Innovation</span>
                                                 </div>
                                             </div>
                                         </div>
 
                                         <div className="pt-14 border-t border-white/5 leading-tight">
-                                            <p className="text-2xl md:text-3xl font-black italic text-white/90 tracking-tighter uppercase">
-                                                &quot;ENGINEERING SYSTEMS FOR REAL-WORLD LOAD.&quot;
+                                            <p className="text-2xl font-black italic text-white/5 transition-colors group-hover:text-primary/10 transition-colors duration-700 uppercase">
+                                                &quot;Architecture over code.&quot;
                                             </p>
                                         </div>
 
@@ -199,8 +250,8 @@ export default function Skills() {
                                                 <span className="text-2xl font-black text-primary italic">3+</span>
                                             </div>
                                             <div className="space-y-1">
-                                                <div className="text-[10px] font-black uppercase tracking-[0.3em] text-white">LIVE_PROD_SYSTEMS</div>
-                                                <div className="text-[9px] font-bold text-white/20 uppercase tracking-widest leading-none">STATUS: OPTIMIZED</div>
+                                                <div className="text-[10px] font-black uppercase tracking-[0.3em] text-white">NODES_OPTIMIZED</div>
+                                                <div className="text-[9px] font-bold text-white/20 uppercase tracking-widest leading-none">STATUS: ACTIVE</div>
                                             </div>
                                         </div>
                                     </div>
