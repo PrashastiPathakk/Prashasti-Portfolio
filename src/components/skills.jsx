@@ -134,20 +134,25 @@ export default function Skills() {
                         </div>
                     </div>
 
-                    {/* Secondary Competencies Grid */}
-                    <div className="pt-40">
-                        <div className="grid lg:grid-cols-[1fr_400px] gap-24 items-start">
-                            {/* Expertise Domains */}
-                            <div className="grid md:grid-cols-2 gap-12">
-                                {skillCategories.map((category, index) => (
-                                    <div key={category.title} className="space-y-8">
+                    {/* Section 2: Technical (Visual Match Image 443) */}
+                    <div className="pt-40 space-y-20">
+                        <div className="flex items-center gap-4">
+                            <div className="h-[1px] w-12 bg-primary/40"></div>
+                            <span className="text-[10px] font-black text-primary uppercase tracking-[0.5em]">TECHNICAL.</span>
+                        </div>
+
+                        <div className="grid lg:grid-cols-[1fr_420px] gap-24 items-start">
+                            {/* Expertise Domains Grid */}
+                            <div className="grid md:grid-cols-2 gap-x-20 gap-y-16">
+                                {skillCategories.map((category) => (
+                                    <div key={category.title} className="space-y-6">
                                         <div className="flex items-center gap-3">
-                                            <div className="w-[1px] h-4 bg-primary/40"></div>
-                                            <h3 className="text-xs font-black uppercase tracking-[0.4em] text-foreground/80">{category.title}</h3>
+                                            <div className="w-[1.5px] h-3 bg-primary"></div>
+                                            <h3 className="text-[11px] font-black uppercase tracking-[0.3em] text-white/90">{category.title}</h3>
                                         </div>
-                                        <div className="flex flex-wrap gap-2">
+                                        <div className="flex flex-wrap gap-2.5">
                                             {category.skills.map((s) => (
-                                                <span key={s} className="px-3 py-2 bg-foreground/5 text-foreground/40 text-[9px] font-bold uppercase tracking-[0.2em] border border-white/5 hover:border-primary/20 hover:text-foreground transition-all">
+                                                <span key={s} className="px-3.5 py-1.5 bg-[#121418] text-white/80 text-[10px] font-bold uppercase tracking-[0.1em] border border-white/5 hover:border-primary/40 transition-all rounded-sm">
                                                     {s}
                                                 </span>
                                             ))}
@@ -156,47 +161,46 @@ export default function Skills() {
                                 ))}
                             </div>
 
-                            {/* Refined Developer Profile Sidebar */}
-                            <div className="lg:sticky lg:top-32 space-y-12">
-                                <div className="glass dark:glass-dark rounded-[2.5rem] border border-white/5 p-12 shadow-2xl relative overflow-hidden group">
-                                    <div className="absolute inset-0 opacity-5 pointer-events-none" 
-                                         style={{ backgroundImage: 'radial-gradient(circle, #fff 1px, transparent 1px)', backgroundSize: '20px 20px' }} />
+                            {/* Refined Developer Profile Sidebar (Match Image 443) */}
+                            <div className="lg:sticky lg:top-32 h-full">
+                                <div className="bg-[#121418] rounded-[2.5rem] border border-white/5 p-14 h-full shadow-2xl relative overflow-hidden group">
+                                    <div className="absolute inset-0 opacity-[0.02] pointer-events-none" 
+                                         style={{ backgroundImage: 'radial-gradient(circle, #fff 1px, transparent 1px)', backgroundSize: '24px 24px' }} />
 
-                                    <div className="space-y-12 relative z-10">
-                                        <div className="space-y-8">
-                                            <div className="space-y-1">
-                                                <span className="text-[9px] font-black text-primary uppercase tracking-[0.4em]">SYSTEM_IDENTITY</span>
-                                                <h4 className="text-2xl font-black text-white italic tracking-tighter uppercase">PRASHASTI PATHAK</h4>
+                                    <div className="space-y-14 relative z-10">
+                                        <div className="space-y-10">
+                                            <div className="space-y-2">
+                                                <span className="text-[9px] font-black text-primary uppercase tracking-[0.5em]">SYSTEM_IDENTITY</span>
+                                                <h4 className="text-3xl font-black text-white italic tracking-tighter uppercase leading-none">PRASHASTI PATHAK</h4>
                                             </div>
                                             
-                                            <div className="space-y-6">
+                                            <div className="space-y-8">
                                                 <div className="flex flex-col">
-                                                    <span className="text-[9px] font-bold text-foreground/30 uppercase tracking-widest leading-none mb-2">Core_Designation</span>
-                                                    <span className="text-sm font-bold text-foreground/80 uppercase tracking-tighter">Backend Engineer & SDE Intern</span>
+                                                    <span className="text-[9px] font-black text-white/20 uppercase tracking-[0.3em] mb-2 leading-none">CORE_DESIGNATION</span>
+                                                    <span className="text-sm font-bold text-white/80 uppercase tracking-tighter">Backend Engineer & SDE Intern</span>
                                                 </div>
                                                 <div className="flex flex-col">
-                                                    <span className="text-[9px] font-bold text-foreground/30 uppercase tracking-widest leading-none mb-2">Current_Priority</span>
-                                                    <span className="text-sm font-bold text-foreground/80 uppercase tracking-tighter">Scalable Systems Architecture</span>
+                                                    <span className="text-[9px] font-black text-white/20 uppercase tracking-[0.3em] mb-2 leading-none">CURRENT_PRIORITY</span>
+                                                    <span className="text-sm font-bold text-white/80 uppercase tracking-tighter">Scalable Systems Architecture</span>
                                                 </div>
                                             </div>
                                         </div>
 
-                                        <div className="pt-12 border-t border-white/5 leading-tight">
-                                            <p className="text-2xl font-black italic text-foreground/10 group-hover:text-primary/40 transition-colors duration-700 uppercase">
-                                                &quot;Engineering systems for real-world load.&quot;
+                                        <div className="pt-14 border-t border-white/5 leading-tight">
+                                            <p className="text-2xl md:text-3xl font-black italic text-white/90 tracking-tighter uppercase">
+                                                &quot;ENGINEERING SYSTEMS FOR REAL-WORLD LOAD.&quot;
                                             </p>
                                         </div>
 
-                                        {/* Holographic Counter Styling */}
+                                        {/* Status Component: Compact Counter */}
                                         <div className="flex items-center gap-6 pt-6">
-                                            <div className="relative w-16 h-16 flex items-center justify-center">
-                                                <div className="absolute inset-0 border border-primary/20 rounded-2xl rotate-45" />
-                                                <div className="absolute inset-2 border border-primary/40 rounded-xl -rotate-12 animate-pulse" />
+                                            <div className="relative w-14 h-14 flex items-center justify-center">
+                                                <div className="absolute inset-0 border border-primary/30 rounded-lg rotate-45 group-hover:rotate-90 transition-transform duration-700" />
                                                 <span className="text-2xl font-black text-primary italic">3+</span>
                                             </div>
                                             <div className="space-y-1">
-                                                <div className="text-[10px] font-black uppercase tracking-[0.3em] text-foreground/90">LIVE_PROD_SYSTEMS</div>
-                                                <div className="text-[9px] font-bold text-foreground/30 uppercase leading-none">Status: Optimized</div>
+                                                <div className="text-[10px] font-black uppercase tracking-[0.3em] text-white">LIVE_PROD_SYSTEMS</div>
+                                                <div className="text-[9px] font-bold text-white/20 uppercase tracking-widest leading-none">STATUS: OPTIMIZED</div>
                                             </div>
                                         </div>
                                     </div>
