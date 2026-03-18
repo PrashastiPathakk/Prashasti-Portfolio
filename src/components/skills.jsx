@@ -134,52 +134,56 @@ export default function Skills() {
                             ))}
                         </div>
 
-                        {/* Right: Profile Summary Card (Image 469 Match) */}
+                        {/* Right: Profile Summary Card (Image 469 Match Refined) */}
                         <motion.div
                             initial={{ opacity: 0, x: 20 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
-                            className="bg-[#1A1D24] rounded-[2.5rem] border border-white/5 p-12 shadow-3xl relative overflow-hidden group"
+                            className="bg-[#1A1D24] rounded-[3rem] border border-white/10 p-14 h-full shadow-4xl relative overflow-hidden group"
                         >
                             {/* Background Chip Icon */}
                             <div className="absolute top-12 right-12 opacity-[0.03] group-hover:opacity-[0.1] transition-opacity duration-1000 rotate-12">
-                                <Cpu size={140} strokeWidth={1} />
+                                <Cpu size={160} strokeWidth={1} />
                             </div>
 
-                            <div className="space-y-10 relative z-10">
-                                <div className="space-y-8">
+                            <div className="space-y-12 relative z-10">
+                                <div className="space-y-10">
                                     {[
                                         { label: 'PROFILE:', value: 'Backend Engineer & SDE Intern' },
                                         { label: 'DOMAIN:', value: 'Scalable Systems, REST APIs, Distributed Logic' },
                                         { label: 'EDUCATION:', value: 'Final Year — Bachelor of Computer Science' },
                                         { label: 'LOCATION:', value: 'Active SDE Intern @ JBH Tech Innovation' },
                                     ].map((item) => (
-                                        <div key={item.label} className="grid grid-cols-[110px_1fr] items-start gap-4">
-                                            <span className="text-[10px] font-black text-primary uppercase tracking-widest">{item.label}</span>
-                                            <span className="text-sm font-bold text-white/90 leading-tight">{item.value}</span>
+                                        <div key={item.label} className="grid grid-cols-[130px_1fr] items-start gap-6">
+                                            <span className="text-[11px] font-black text-primary/90 uppercase tracking-[0.2em] pt-1">{item.label}</span>
+                                            <span className="text-base font-black text-white leading-tight uppercase tracking-tight">{item.value}</span>
                                         </div>
                                     ))}
                                 </div>
 
-                                <div className="h-[1px] w-full bg-white/5" />
+                                <div className="h-[1px] w-full bg-white/10" />
 
-                                <div className="grid grid-cols-[110px_1fr] items-start gap-4">
-                                    <span className="text-[10px] font-black text-primary/60 uppercase tracking-widest pt-1">TECH FOCUS:</span>
-                                    <p className="text-lg font-black italic text-white/90 tracking-tight leading-tight uppercase">
-                                        &quot;Building systems that hold up under pressure and stay fast at scale.&quot;
+                                <div className="grid grid-cols-[130px_1fr] items-start gap-6 pt-2">
+                                    <span className="text-[11px] font-black text-primary/70 uppercase tracking-[0.2em] pt-2">TECH FOCUS:</span>
+                                    <p className="text-2xl font-black italic text-white tracking-tighter leading-[1.1] uppercase">
+                                        &quot;BUILDING SYSTEMS THAT HOLD UP UNDER PRESSURE AND STAY FAST AT SCALE.&quot;
                                     </p>
                                 </div>
 
-                                {/* Overlapping Circles + Text */}
-                                <div className="flex items-center gap-6 pt-6">
-                                    <div className="flex -space-x-3">
+                                {/* Modern Project Indicator: Glowing Blocks (Replacing Rings) */}
+                                <div className="flex items-center gap-8 pt-10">
+                                    <div className="flex gap-2">
                                         {[0, 1, 2, 3].map((i) => (
-                                            <div key={i} className="w-9 h-9 rounded-full border-2 border-[#1A1D24] bg-primary/20 backdrop-blur-sm" />
+                                            <div key={i} className="w-8 h-8 bg-primary/20 border border-primary/40 rounded-sm shadow-[0_0_15px_rgba(var(--primary-rgb),0.2)] animate-pulse" 
+                                                 style={{ animationDelay: `${i * 0.2}s` }} />
                                         ))}
                                     </div>
-                                    <span className="text-[11px] font-black uppercase tracking-[0.2em] text-white/95 leading-none">
-                                        3+ Live Production Projects
-                                    </span>
+                                    <div className="space-y-1">
+                                        <span className="text-sm font-black uppercase tracking-[0.2em] text-white leading-none block">
+                                            4+ Live Production Projects
+                                        </span>
+                                        <span className="text-[9px] font-bold text-white/20 uppercase tracking-[0.4em] leading-none">Status: Active_Nodes</span>
+                                    </div>
                                 </div>
                             </div>
                         </motion.div>
