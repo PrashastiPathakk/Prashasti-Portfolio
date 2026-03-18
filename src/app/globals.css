@@ -5,11 +5,11 @@
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
-  --color-primary: hsl(215 100% 50%);
-  --color-accent: hsl(262 83% 58%);
+  --color-primary: hsl(42 100% 50%);
+  --color-accent: hsl(45 100% 60%);
 
   --background-light: hsl(0 0% 100%);
-  --background-dark: hsl(222 47% 11%);
+  --background-dark: hsl(0 0% 2%);
 }
 
 :root {

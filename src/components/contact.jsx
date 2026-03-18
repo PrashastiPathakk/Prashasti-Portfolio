@@ -16,7 +16,7 @@ export default function Contact() {
                         viewport={{ once: true }}
                         className="flex flex-col items-center space-y-8"
                     >
-                        <div className="w-24 h-24 rounded-full bg-[#1A1A1A] flex items-center justify-center text-[#FFB400]">
+                        <div className="w-24 h-24 rounded-full bg-[#1A1A1A] flex items-center justify-center text-primary">
                             <Phone size={32} strokeWidth={1.5} />
                         </div>
                         <div className="text-center space-y-4">
@@ -33,7 +33,7 @@ export default function Contact() {
                         transition={{ delay: 0.1 }}
                         className="flex flex-col items-center space-y-8"
                     >
-                        <div className="w-24 h-24 rounded-full bg-[#1A1A1A] flex items-center justify-center text-[#FFB400]">
+                        <div className="w-24 h-24 rounded-full bg-[#1A1A1A] flex items-center justify-center text-primary">
                             <Send size={32} strokeWidth={1.5} />
                         </div>
                         <div className="text-center space-y-4">
@@ -50,12 +50,12 @@ export default function Contact() {
                         transition={{ delay: 0.2 }}
                         className="flex flex-col items-center space-y-8"
                     >
-                        <div className="w-24 h-24 rounded-full bg-[#1A1A1A] flex items-center justify-center text-[#FFB400]">
+                        <div className="w-24 h-24 rounded-full bg-[#1A1A1A] flex items-center justify-center text-primary">
                             <Globe size={32} strokeWidth={1.5} />
                         </div>
                         <div className="text-center space-y-4">
                             <h4 className="text-sm font-black uppercase tracking-[0.2em] text-white/50">Download Resume</h4>
-                            <a href="#" className="text-2xl font-medium tracking-tight hover:text-[#FFB400] transition-colors">resumelink</a>
+                            <a href="#" className="text-2xl font-medium tracking-tight hover:text-primary transition-colors">resumelink</a>
                         </div>
                     </motion.div>
                 </div>
@@ -73,7 +73,7 @@ export default function Contact() {
                     <motion.button
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        className="px-16 py-6 bg-[#FFB400] text-black text-sm font-black uppercase tracking-[0.3em] rounded-full hover:bg-[#FFC433] transition-all shadow-[0_0_30px_rgba(255,180,0,0.2)]"
+                        className="px-16 py-6 bg-primary text-black text-sm font-black uppercase tracking-[0.3em] rounded-full hover:opacity-90 transition-all shadow-[0_0_30px_rgba(255,180,0,0.2)]"
                     >
                         Click Here
                     </motion.button>
@@ -93,7 +93,7 @@ export default function Contact() {
                         ].map((social, i) => (
                             <motion.a
                                 key={i}
-                                whileHover={{ y: -5, backgroundColor: '#FFB400', color: '#000' }}
+                                whileHover={{ y: -5, backgroundColor: 'var(--color-primary)', color: '#000' }}
                                 href={social.href}
                                 className="w-14 h-14 rounded-full bg-[#1A1A1A] flex items-center justify-center text-white transition-all duration-300"
                             >

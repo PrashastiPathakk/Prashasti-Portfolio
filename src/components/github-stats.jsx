@@ -114,7 +114,7 @@ export default function GithubStats() {
                         <div className="flex justify-between items-end mb-8">
                             <h3 className="uppercase tracking-widest text-foreground/40 text-xs font-bold">Contribution Heatmap</h3>
                             <div className="flex gap-1">
-                                {['#0e4429', '#006d32', '#26a641', '#39d353'].map(c => (
+                                {['#3d2d00', '#7a5a00', '#b88700', '#FFB400'].map(c => (
                                     <div key={c} className="w-3 h-3 rounded-sm" style={{ backgroundColor: c }} />
                                 ))}
                             </div>
@@ -127,9 +127,9 @@ export default function GithubStats() {
                                     key={i}
                                     className="aspect-square rounded-sm"
                                     style={{
-                                        backgroundColor: i % 7 === 0 ? '#161b22' :
-                                            i % 4 === 0 ? '#0e4429' :
-                                                i % 3 === 0 ? '#006d32' : '#26a641'
+                                        backgroundColor: i % 7 === 0 ? '#1A1A1A' :
+                                            i % 4 === 0 ? '#3d2d00' :
+                                                i % 3 === 0 ? '#7a5a00' : '#b88700'
                                     }}
                                 />
                             ))}
