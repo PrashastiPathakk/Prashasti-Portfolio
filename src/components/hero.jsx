@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 export default function Hero() {
     return (
-        <section className="min-h-[90vh] flex flex-col items-center justify-center px-4 pt-32 lg:pt-0 relative overflow-hidden">
+        <section id="hero" className="min-h-[90vh] flex flex-col items-center justify-center px-4 pt-32 lg:pt-32 relative overflow-hidden">
             {/* Background Gradients */}
             <div className="absolute top-1/4 -left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[120px]" />
             <div className="absolute bottom-1/4 -right-1/4 w-96 h-96 bg-accent/20 rounded-full blur-[120px]" />
@@ -29,7 +29,8 @@ export default function Hero() {
                     </motion.span>
 
                     <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6">
-                        Engineering scalable solutions for <span className="gradient-text">complex digital challenges.</span>
+                        <span className="text-3xl md:text-5xl block mb-2 text-foreground/80">Hi, I&apos;m <span className="text-primary">Prashasti Pathak</span></span>
+                        Building robust, scalable, and <span className="gradient-text">user-centric software solutions.</span>
                         <br />
                         <span className="text-foreground/50 text-3xl md:text-5xl">Full-Stack Development. Architectural Excellence.</span>
                     </h1>
