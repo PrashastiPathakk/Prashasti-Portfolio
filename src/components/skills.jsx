@@ -200,7 +200,7 @@ export default function Skills() {
                     <div className="pt-40 space-y-24 text-center">
                         <div className="space-y-6 max-w-4xl mx-auto">
                             <h3 className="text-5xl md:text-7xl font-black text-white leading-none tracking-tighter uppercase italic">
-                                TECHNICAL <span className="text-primary">EXCELLENCE.</span>
+                                TECHNICAL <span className="text-primary">SCOPE.</span>
                             </h3>
                             <p className="text-lg text-foreground/60 leading-relaxed font-medium uppercase tracking-widest text-[11px]">
                                 A modern stack designed for performance, security, and scalability.
