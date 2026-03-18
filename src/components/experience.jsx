@@ -74,7 +74,7 @@ export default function Experience() {
 
                                     <ul className="space-y-4">
                                         {item.achievements.map((ach) => (
-                                            <li key={ach} className="flex items-start gap-4 text-sm text-foreground/80 group">
+                                            <li key={ach} className="flex items-start gap-4 text-sm text-foreground/90 font-bold group leading-relaxed">
                                                 <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary shrink-0 group-hover:scale-150 transition-transform" />
                                                 {ach}
                                             </li>
