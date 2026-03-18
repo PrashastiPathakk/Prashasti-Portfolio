@@ -62,15 +62,7 @@ export default function Skills() {
                             >
                                 SKILLS
                             </motion.h2>
-                            <motion.h2 
-                                initial={{ opacity: 0, x: -20 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: 0.1 }}
-                                className="text-6xl md:text-9xl font-black italic tracking-tighter leading-[0.85] uppercase gradient-text"
-                            >
-                                MASTERY.
-                            </motion.h2>
+
                         </div>
 
 
