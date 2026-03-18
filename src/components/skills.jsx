@@ -159,7 +159,7 @@ export default function Skills() {
                     <div className="pt-40 space-y-24 text-center">
                         <div className="space-y-6 max-w-4xl mx-auto">
                             <h3 className="text-5xl md:text-7xl font-black text-white leading-none tracking-tighter uppercase italic">
-                                ENGINEERING <span className="text-primary">PHILOSOPHY.</span>
+                                BACKEND <span className="text-primary">FOUNDATIONS.</span>
                             </h3>
                             <p className="text-lg text-foreground/60 leading-relaxed font-medium uppercase tracking-widest text-[11px]">
                                 I focus on building maintainable backend systems using proven engineering patterns and scalable API design.
