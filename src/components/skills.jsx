@@ -48,44 +48,32 @@ const workingKnowledge = [
 
 export default function Skills() {
     return (
-        <section id="skills" className="py-24 px-4 bg-foreground/5 overflow-hidden">
-            <div className="max-w-7xl mx-auto">
-                <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
-                    <div className="text-left">
-                        <h2 className="text-3xl md:text-5xl font-bold mb-4 uppercase">
-                            Skills
-                        </h2>
-                        <p className="text-foreground/60 text-lg max-w-2xl leading-relaxed">
-                            A breakdown of my technical proficiencies and core engineering expertise.
-                        </p>
-                    </div>
+        <section id="skills" className="py-32 relative overflow-hidden">
+            <div className="container mx-auto px-6 relative z-10">
+                <div className="flex flex-col gap-4 mb-24">
+                    <motion.h2 
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        className="text-xs font-black uppercase tracking-[0.5em] text-primary"
+                    >
+                        Skills
+                    </motion.h2>
+                    <motion.p 
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.1 }}
+                        className="text-4xl md:text-5xl font-black tracking-tighter text-foreground/90 italic"
+                    >
+                        Advanced <span className="text-primary">Engineering</span> Arsenal.
+                    </motion.p>
                 </div>
 
-                <div className="space-y-32">
-                    {/* Header: Technical Excellence */}
-                    <div className="text-center space-y-4 max-w-3xl mx-auto">
-                        <motion.h2 
-                            initial={{ opacity: 0, scale: 0.95 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            viewport={{ once: true }}
-                            className="text-4xl md:text-6xl font-black tracking-tighter italic"
-                        >
-                            Technical <span className="gradient-text">Excellence.</span>
-                        </motion.h2>
-                        <p className="text-foreground/40 text-sm md:text-base font-bold uppercase tracking-[0.3em]">
-                            High Performance Infrastructure & Frontend Mastery
-                        </p>
-                    </div>
-
-                    {/* Section 1: Core Proficiencies (The Charts) */}
-                    <div className="max-w-4xl mx-auto w-full space-y-16">
-                        <div className="flex items-center gap-4">
-                            <span className="text-[10px] font-black text-primary uppercase tracking-[0.5em]">01_</span>
-                            <h3 className="text-xs font-black uppercase tracking-[0.3em] text-foreground/80">Core Proficiencies</h3>
-                            <div className="h-[1px] flex-1 bg-foreground/5"></div>
-                        </div>
-
-                        <div className="grid gap-12">
+                <div className="space-y-40">
+                    {/* Section 1: Main Skills Chart (Core Proficiencies) */}
+                    <div className="max-w-4xl space-y-20">
+                        <div className="grid gap-14">
                             {[
                                 { name: 'JavaScript', level: 'EXPERT', percentage: 90 },
                                 { name: 'Node.js', level: 'EXPERT', percentage: 85 },
@@ -104,18 +92,18 @@ export default function Skills() {
                                 >
                                     <div className="flex justify-between items-end mb-4">
                                         <div className="flex items-baseline gap-4">
-                                            <span className="text-4xl md:text-5xl font-black italic tracking-tighter uppercase text-foreground/90 group-hover:text-primary transition-colors duration-500">
+                                            <span className="text-4xl md:text-6xl font-black italic tracking-tighter uppercase text-foreground/90 group-hover:text-primary transition-colors duration-500 leading-none">
                                                 {skill.name}
                                             </span>
                                             <span className="text-[10px] font-black text-primary/30 group-hover:text-primary/60 transition-colors">
                                                 {skill.percentage}%
                                             </span>
                                         </div>
-                                        <span className="text-[10px] font-black text-foreground/40 uppercase tracking-[0.2em] mb-2">
+                                        <span className="text-[10px] font-black text-foreground/40 uppercase tracking-[0.2em] mb-3">
                                             {skill.level}
                                         </span>
                                     </div>
-                                    <div className="h-[4px] w-full bg-foreground/5 relative rounded-full overflow-hidden">
+                                    <div className="h-[2px] w-full bg-foreground/5 relative overflow-hidden">
                                         <motion.div
                                             initial={{ width: 0 }}
                                             whileInView={{ width: `${skill.percentage}%` }}
@@ -129,12 +117,20 @@ export default function Skills() {
                         </div>
                     </div>
 
-                    {/* Section 2: Domain Expertise Grid */}
-                    <div className="space-y-16">
-                        <div className="flex items-center gap-4">
-                            <span className="text-[10px] font-black text-primary uppercase tracking-[0.5em]">02_</span>
-                            <h3 className="text-xs font-black uppercase tracking-[0.3em] text-foreground/80">Domain Expertise</h3>
-                            <div className="h-[1px] flex-1 bg-foreground/5"></div>
+                    {/* Section 2: Technical Excellence (Domain Expertise) */}
+                    <div className="space-y-24">
+                        <div className="space-y-4">
+                            <motion.h3 
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                className="text-3xl md:text-5xl font-black tracking-tighter italic"
+                            >
+                                Technical <span className="gradient-text">Excellence.</span>
+                            </motion.h3>
+                            <p className="text-foreground/40 text-xs font-bold uppercase tracking-[0.3em]">
+                                High Performance Infrastructure & Frontend Mastery
+                            </p>
                         </div>
 
                         <div className="grid lg:grid-cols-[1fr_380px] gap-12 items-start">
@@ -179,7 +175,7 @@ export default function Skills() {
                                 viewport={{ once: true }}
                                 className="lg:sticky lg:top-32 space-y-8"
                             >
-                                <div className="relative glass dark:glass-dark rounded-[2.5rem] border border-white/10 p-10 shadow-2xl overflow-hidden group">
+                                <div className="relative glass dark:glass-dark rounded-[3rem] border border-white/10 p-10 shadow-2xl overflow-hidden group">
                                     <div className="absolute inset-0 opacity-5 pointer-events-none" 
                                          style={{ backgroundImage: 'radial-gradient(circle, currentColor 1px, transparent 1px)', backgroundSize: '16px 16px' }} />
 
@@ -193,7 +189,7 @@ export default function Skills() {
                                             <div className="space-y-4">
                                                 <div className="flex flex-col">
                                                     <span className="text-[9px] font-bold text-foreground/30 uppercase tracking-widest">Current Position</span>
-                                                    <span className="text-sm font-bold text-foreground/80">Backend Engineer & SDE Intern</span>
+                                                    <span className="text-sm font-bold text-foreground/80 lowercase">backend engineer & sde intern</span>
                                                 </div>
                                                 <div className="flex flex-col">
                                                     <span className="text-[9px] font-bold text-foreground/30 uppercase tracking-widest">Industry Focus</span>
@@ -202,9 +198,9 @@ export default function Skills() {
                                             </div>
                                         </div>
 
-                                        <div className="pt-8 border-t border-white/5">
-                                            <p className="text-lg font-black italic text-foreground/30 leading-tight group-hover:text-foreground/80 transition-colors duration-700">
-                                                &quot;Building systems that hold up under pressure and stay fast at scale.&quot;
+                                        <div className="pt-8 border-t border-white/5 leading-tight">
+                                            <p className="text-xl font-black italic text-foreground/20 group-hover:text-foreground/80 transition-colors duration-700">
+                                                &quot;solutions that remain stable under real-world load.&quot;
                                             </p>
                                         </div>
 
@@ -214,10 +210,10 @@ export default function Skills() {
                                                 {[0, 1, 2].map((i) => (
                                                     <motion.div
                                                         key={i}
-                                                        animate={{ rotate: 360 }}
+                                                        animate={{ rotate: 360, scale: [1, 1.05, 1] }}
                                                         transition={{ duration: 10 + i * 2, repeat: Infinity, ease: 'linear' }}
                                                         className="absolute inset-0 border border-primary/20 rounded-xl"
-                                                        style={{ transform: `scale(${1 + i * 0.2}) rotate(${i * 45}deg)` }}
+                                                        style={{ transform: `rotate(${i * 45}deg)` }}
                                                     />
                                                 ))}
                                                 <div className="w-12 h-12 bg-primary/20 rounded-xl backdrop-blur-md flex items-center justify-center relative z-10 border border-primary/50 text-primary font-black text-xl">
@@ -225,8 +221,8 @@ export default function Skills() {
                                                 </div>
                                             </div>
                                             <div className="flex flex-col">
-                                                <span className="text-[10px] font-black uppercase tracking-[0.3em] text-foreground/90">Live Projects</span>
-                                                <span className="text-[9px] font-bold text-foreground/30 uppercase">In Production</span>
+                                                <span className="text-[10px] font-black uppercase tracking-[0.3em] text-foreground/90 leading-none">Live Projects</span>
+                                                <span className="text-[9px] font-bold text-foreground/30 uppercase mt-1">Production Grade</span>
                                             </div>
                                         </div>
                                     </div>
