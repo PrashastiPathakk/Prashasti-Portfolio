@@ -14,7 +14,7 @@ export default function About() {
                 >
                     <div className="mb-10">
                         <h2 className="text-5xl md:text-7xl font-black italic tracking-tighter text-foreground uppercase leading-none">
-                            ENGINEERING<br/>PROFILE.
+                            CORE<br/>IDENTITY.
                         </h2>
                     </div>
 
