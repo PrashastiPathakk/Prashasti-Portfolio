@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Cpu, Code, Server, Database, Cloud, Layers, Settings, Shield, Terminal, Activity } from 'lucide-react';
+import { Cpu, Code, Server, Database, Cloud, Layers, Settings, Shield, Terminal, Activity, User, Briefcase, GraduationCap, MapPin, Quote } from 'lucide-react';
 
 const skillCategories = [
     {
@@ -108,47 +108,66 @@ export default function Skills() {
                                 initial={{ opacity: 0, x: 20 }}
                                 whileInView={{ opacity: 1, x: 0 }}
                                 viewport={{ once: true }}
-                                className="bg-[#1A1D24] rounded-[3rem] p-16 h-full shadow-4xl relative overflow-hidden group border border-white/5"
+                                className="bg-[#1A1D24] rounded-[3rem] p-12 lg:p-16 h-full shadow-4xl relative overflow-hidden group border border-white/5"
                             >
-                                {/* Background Chip Icon */}
-                                <div className="absolute top-12 right-12 opacity-[0.03] group-hover:opacity-[0.1] transition-opacity duration-1000 rotate-12">
-                                    <Cpu size={140} strokeWidth={1} />
-                                </div>
+                                {/* Background Decorative Element */}
+                                <div className="absolute -top-20 -right-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/10 transition-colors duration-1000" />
+                                
+                                <div className="relative z-10 space-y-12">
+                                    {/* Header: Identity */}
+                                    <div className="flex items-center justify-between">
+                                        <div className="space-y-1">
+                                            <span className="text-[10px] font-black text-primary uppercase tracking-[0.3em]">Identity.</span>
+                                            <h4 className="text-2xl font-black text-white italic tracking-tighter uppercase">Developer Profile</h4>
+                                        </div>
+                                        <div className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center text-primary/40 group-hover:text-primary transition-colors">
+                                            <User size={24} />
+                                        </div>
+                                    </div>
 
-                                <div className="space-y-12 relative z-10">
-                                    <div className="space-y-10">
+                                    {/* Info Grid */}
+                                    <div className="space-y-8">
                                         {[
-                                            { label: 'PROFILE:', value: 'Backend Engineer & SDE Intern' },
-                                            { label: 'DOMAIN:', value: 'Scalable Systems, REST APIs, Distributed Logic' },
-                                            { label: 'EDUCATION:', value: 'Final Year — Bachelor of Computer Science' },
-                                            { label: 'LOCATION:', value: 'Active SDE Intern @ JBH Tech Innovation' },
-                                        ].map((item) => (
-                                            <div key={item.label} className="grid grid-cols-[120px_1fr] items-start gap-6">
-                                                <span className="text-[10px] font-black text-primary uppercase tracking-widest pt-1">{item.label}</span>
-                                                <span className="text-base font-bold text-white leading-tight uppercase tracking-tight">{item.value}</span>
+                                            { icon: <Briefcase size={18} />, label: 'Profile', value: 'Backend Engineer & SDE Intern' },
+                                            { icon: <Activity size={18} />, label: 'Domain', value: 'Scalable Systems & Distributed Logic' },
+                                            { icon: <GraduationCap size={18} />, label: 'Education', value: 'Final Year — B.Tech CSE' },
+                                            { icon: <MapPin size={18} />, label: 'Location', value: 'Intern @ JBH Tech Innovation' },
+                                        ].map((item, i) => (
+                                            <div key={i} className="flex gap-6 group/item">
+                                                <div className="w-10 h-10 rounded-xl bg-white/5 flex-shrink-0 flex items-center justify-center text-primary/60 group-hover/item:text-primary group-hover/item:bg-primary/10 transition-all duration-300">
+                                                    {item.icon}
+                                                </div>
+                                                <div className="space-y-1">
+                                                    <span className="text-[9px] font-black text-foreground/40 uppercase tracking-widest">{item.label}</span>
+                                                    <p className="text-sm font-bold text-white/90 leading-tight tracking-tight uppercase">{item.value}</p>
+                                                </div>
                                             </div>
                                         ))}
                                     </div>
 
-                                    <div className="h-[1px] w-full bg-white/5" />
+                                    <div className="h-[1px] w-full bg-linear-to-r from-white/5 via-white/10 to-white/5" />
 
-                                    <div className="grid grid-cols-[120px_1fr] items-start gap-6">
-                                        <span className="text-[10px] font-black text-primary/60 uppercase tracking-widest pt-1">TECH FOCUS:</span>
-                                        <p className="text-base font-medium text-white/90 leading-relaxed italic">
+                                    {/* Tech Focus Quote */}
+                                    <div className="relative p-8 rounded-3xl bg-white/5 border border-white/5 hover:border-primary/20 transition-all duration-500">
+                                        <Quote className="absolute -top-3 -left-3 text-primary/20" size={32} />
+                                        <p className="text-sm font-medium text-white/80 leading-relaxed italic relative z-10">
                                             &quot;Building systems that hold up under pressure and stay fast at scale.&quot;
                                         </p>
                                     </div>
 
-                                    {/* Overlapping Circles (Rings) - Reverted from Blocks per Image 670 */}
-                                    <div className="flex items-center gap-8 pt-8">
-                                        <div className="flex -space-x-4">
-                                            {[0, 1, 2, 3].map((i) => (
-                                                <div key={i} className="w-12 h-12 rounded-full border-2 border-[#1A1D24] bg-primary/20 backdrop-blur-md shadow-xl" />
+                                    {/* Live Projects Badge */}
+                                    <div className="flex items-center justify-between pt-4">
+                                        <div className="flex -space-x-3">
+                                            {[0, 1, 2].map((i) => (
+                                                <div key={i} className="w-10 h-10 rounded-full border-2 border-[#1A1D24] bg-primary/20 backdrop-blur-md flex items-center justify-center">
+                                                    <div className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
+                                                </div>
                                             ))}
                                         </div>
-                                        <span className="text-[11px] font-black uppercase tracking-[0.2em] text-white">
-                                            4+ Live Production Projects
-                                        </span>
+                                        <div className="text-right">
+                                            <span className="block text-xl font-black text-white italic leading-none">4+ LIVE</span>
+                                            <span className="text-[9px] font-black text-primary uppercase tracking-widest">Production Projects</span>
+                                        </div>
                                     </div>
                                 </div>
                             </motion.div>
