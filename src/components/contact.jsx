@@ -22,7 +22,7 @@ export default function Contact() {
                             </div>
                             <div className="text-center space-y-4">
                                 <h4 className="text-sm font-black uppercase tracking-[0.2em] text-white/50">Contact Number</h4>
-                                <p className="text-2xl font-medium tracking-tight hover:text-primary transition-colors">+91 7460985381</p>
+                                <p className="text-2xl font-medium tracking-tight hover:text-primary transition-colors">+91 74609 85381</p>
                             </div>
                         </a>
                     </motion.div>
