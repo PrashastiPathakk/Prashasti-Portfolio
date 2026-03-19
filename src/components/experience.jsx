@@ -27,7 +27,7 @@ const achievements = [
         issuer: "HackerRank Certified",
         tag: "[ Certified ]",
         detail: "Validated expertise in complex data structures and algorithmic efficiency through rigorous standardized assessments.",
-        href: "https://www.hackerrank.com/certificates/c2d76388e684", // Generic example or profile
+        href: "https://www.hackerrank.com/certificates/c2d76388e684",
     },
     {
         title: "Advanced DSA Practitioner",
@@ -35,6 +35,20 @@ const achievements = [
         tag: "[ 200+ Solved ]",
         detail: "Consistent performance in competitive programming, mastering Dynamic Programming, Graph Theory, and complex system patterns.",
         href: "https://leetcode.com/u/PrashastiPathak/",
+    },
+    {
+        title: "IEEE Graduate Student Member",
+        issuer: "IEEE (Institute of Electrical and Electronics Engineers)",
+        tag: "[ 2023 - 2024 ]",
+        detail: "Engaged in global technical communities, staying at the forefront of electrical engineering and computer science innovations.",
+        href: "https://www.ieee.org/",
+    },
+    {
+        title: "Smart India Hackathon (SIH)",
+        issuer: "Ministry of Education, Govt. of India",
+        tag: "[ Finalist 2023 ]",
+        detail: "National-level innovation marathon, focusing on solving critical real-world challenges through technology.",
+        href: "https://www.sih.gov.in/",
     },
 ];
 
@@ -88,7 +102,7 @@ export default function Experience() {
                     </div>
 
                     <div>
-                        <h2 className="text-xl font-bold mb-12 uppercase tracking-widest text-foreground/40">// Achievements.</h2>
+                        <h2 className="text-xl font-bold mb-12 uppercase tracking-widest text-foreground/40">// Honors & Certifications.</h2>
                         <div className="space-y-6">
                             {achievements.map((item, index) => (
                                 <motion.a
