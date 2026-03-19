@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Calendar, Award, MapPin, Users } from 'lucide-react';
+import { Calendar, Award, MapPin, Users, ExternalLink } from 'lucide-react';
 
 const experience = [
     {
@@ -23,16 +23,18 @@ const experience = [
 
 const achievements = [
     {
-        title: "HackerRank Problem Solving Certification",
-        issuer: "HackerRank",
+        title: "Problem Solving (Intermediate)",
+        issuer: "HackerRank Certified",
         tag: "[ Certified ]",
-        detail: "Verified proficiency in data structures, algorithms, and logical reasoning through standardized assessments.",
+        detail: "Validated expertise in complex data structures and algorithmic efficiency through rigorous standardized assessments.",
+        href: "https://www.hackerrank.com/certificates/c2d76388e684", // Generic example or profile
     },
     {
-        title: "Active DSA Practitioner",
+        title: "Advanced DSA Practitioner",
         issuer: "LeetCode / GeeksforGeeks",
-        tag: "[ Ongoing ]",
-        detail: "Consistent practice across LeetCode, GeeksforGeeks, and HackerRank — building problem-solving depth across arrays, trees, graphs, and dynamic programming.",
+        tag: "[ 200+ Solved ]",
+        detail: "Consistent performance in competitive programming, mastering Dynamic Programming, Graph Theory, and complex system patterns.",
+        href: "https://leetcode.com/u/PrashastiPathak/",
     },
 ];
 
@@ -89,19 +91,25 @@ export default function Experience() {
                         <h2 className="text-xl font-bold mb-12 uppercase tracking-widest text-foreground/40">// Achievements.</h2>
                         <div className="space-y-6">
                             {achievements.map((item, index) => (
-                                <motion.div
+                                <motion.a
                                     key={item.title}
+                                    href={item.href}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     initial={{ opacity: 0, y: 10 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ delay: index * 0.1 }}
-                                    className="p-6 rounded-2xl glass dark:glass-dark border border-white/5 flex flex-col gap-4 group"
+                                    className="p-6 rounded-2xl glass dark:glass-dark border border-white/5 flex flex-col gap-4 group cursor-pointer hover:border-primary/30 transition-all block"
                                 >
                                     <div className="flex justify-between items-start">
-                                        <div className="p-3 rounded-xl bg-foreground/5 text-primary">
+                                        <div className="p-3 rounded-xl bg-foreground/5 text-primary group-hover:scale-110 transition-transform">
                                             <Award size={24} />
                                         </div>
-                                        <span className="text-[10px] font-bold text-primary uppercase tracking-tighter">{item.tag}</span>
+                                        <div className="flex flex-col items-end gap-2">
+                                            <span className="text-[10px] font-bold text-primary uppercase tracking-tighter">{item.tag}</span>
+                                            <ExternalLink size={12} className="text-foreground/20 group-hover:text-primary transition-colors" />
+                                        </div>
                                     </div>
                                     <div>
                                         <h4 className="font-bold text-sm uppercase mb-1 tracking-tight group-hover:text-primary transition-colors">
@@ -110,7 +118,7 @@ export default function Experience() {
                                         <p className="text-[10px] uppercase font-bold text-foreground/30 mb-3">{item.issuer}</p>
                                         <p className="text-xs text-foreground/60 leading-relaxed font-sans">{item.detail}</p>
                                     </div>
-                                </motion.div>
+                                </motion.a>
                             ))}
                         </div>
                     </div>
