@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Phone, Send, Globe, Linkedin, Twitter, Facebook, Instagram } from 'lucide-react';
+import { Phone, Send, Globe, Linkedin, Github, Mail } from 'lucide-react';
 
 export default function Contact() {
     return (
@@ -94,15 +94,16 @@ export default function Contact() {
                     </div>
                     <div className="flex gap-4">
                         {[
-                            { icon: <Linkedin size={20} />, href: '#' },
-                            { icon: <Twitter size={20} />, href: '#' },
-                            { icon: <Facebook size={20} />, href: '#' },
-                            { icon: <Instagram size={20} />, href: '#' }
+                            { icon: <Github size={20} />, href: 'https://github.com/PrashastiPathakk' },
+                            { icon: <Linkedin size={20} />, href: 'https://www.linkedin.com/in/prashastipathakk' },
+                            { icon: <Phone size={20} />, href: 'tel:+917460985381' },
+                            { icon: <Mail size={20} />, href: 'mailto:prashastipathak1@gmail.com' }
                         ].map((social, i) => (
                             <motion.a
                                 key={i}
                                 whileHover={{ y: -5, backgroundColor: 'var(--color-primary)', color: '#000' }}
                                 href={social.href}
+                                target={social.href.startsWith('http') ? "_blank" : undefined}
                                 className="w-14 h-14 rounded-full bg-[#1A1A1A] flex items-center justify-center text-white transition-all duration-300"
                             >
                                 {social.icon}
