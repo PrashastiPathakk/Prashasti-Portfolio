@@ -95,7 +95,7 @@ export default function Experience() {
                     </div>
 
                     <div>
-                        <h2 className="text-xl font-bold mb-12 uppercase tracking-widest text-foreground/40">// Honors & Certifications.</h2>
+                        <h2 className="text-xl font-extrabold mb-12 uppercase tracking-widest text-foreground/40 text-primary">Honors & Certifications.</h2>
                         <div className="space-y-6">
                             {achievements.map((item, index) => (
                                 <motion.a
