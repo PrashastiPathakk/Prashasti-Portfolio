@@ -1,11 +1,11 @@
 import React from 'react'
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import Projects from './components/Projects'
-import About from './components/About'
-import Experience from './components/Experience'
-import Contact from './components/Contact'
-import Footer from './components/Footer'
+import Navbar from './components/navbar'
+import Hero from './components/hero'
+import Projects from './components/projects'
+import About from './components/about'
+import Experience from './components/experience'
+import Contact from './components/contact'
+import Footer from './components/footer'
 
 function App() {
   return (
