@@ -23,6 +23,13 @@ const experience = [
 
 const achievements = [
     {
+        title: "Java Full Stack Web Development",
+        issuer: "Wipro Certified (TalentNext)",
+        tag: "[ Certified ]",
+        detail: "In-depth training in Java, Spring Boot, React, and MySQL, focusing on enterprise-scale full-stack application architecture.",
+        href: "/wipro-cert.pdf", // Placeholder for when they upload the file
+    },
+    {
         title: "Problem Solving (Intermediate)",
         issuer: "HackerRank Certified",
         tag: "[ Certified ]",
