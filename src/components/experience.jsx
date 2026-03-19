@@ -43,13 +43,6 @@ const achievements = [
         detail: "Engaged in global technical communities, staying at the forefront of electrical engineering and computer science innovations.",
         href: "https://www.ieee.org/",
     },
-    {
-        title: "Smart India Hackathon (SIH)",
-        issuer: "Ministry of Education, Govt. of India",
-        tag: "[ Finalist 2023 ]",
-        detail: "National-level innovation marathon, focusing on solving critical real-world challenges through technology.",
-        href: "https://www.sih.gov.in/",
-    },
 ];
 
 export default function Experience() {
