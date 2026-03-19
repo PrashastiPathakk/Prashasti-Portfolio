@@ -89,7 +89,7 @@ export default function Contact() {
 
                 {/* Social Bar */}
                 <div className="flex flex-col md:flex-row items-center justify-between pt-10 border-t border-white/5 gap-8">
-                    <div className="text-white/30 text-xs font-black uppercase tracking-[0.4em] text-center md:text-left leading-relaxed">
+                    <div className="text-white text-xs font-black uppercase tracking-[0.4em] text-center md:text-left leading-relaxed">
                         Find me<br />on
                     </div>
                     <div className="flex gap-4">
