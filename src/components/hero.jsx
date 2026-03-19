@@ -64,7 +64,7 @@ export default function Hero() {
                         <motion.button
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.98 }}
-                            onClick={() => window.open('#', '_blank')}
+                            onClick={() => window.open('/resume.pdf', '_blank')}
                             className="px-8 py-3 rounded-full border border-foreground/10 hover:bg-foreground/5 font-semibold flex items-center gap-2 transition-colors w-full sm:w-auto justify-center"
                         >
                             RESUME <Download size={20} />

@@ -54,13 +54,13 @@ export default function Contact() {
                         transition={{ delay: 0.2 }}
                         className="flex flex-col items-center space-y-8"
                     >
-                        <a href="#" className="group flex flex-col items-center space-y-8">
+                        <a href="/resume.pdf" target="_blank" className="group flex flex-col items-center space-y-8">
                             <div className="w-24 h-24 rounded-full bg-[#1A1A1A] flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
                                 <Globe size={32} strokeWidth={1.5} />
                             </div>
                             <div className="text-center space-y-4">
                                 <h4 className="text-sm font-black uppercase tracking-[0.2em] text-white/50">Download Resume</h4>
-                                <p className="text-2xl font-medium tracking-tight hover:text-primary transition-colors">resumelink</p>
+                                <p className="text-2xl font-medium tracking-tight hover:text-primary transition-colors">resume.pdf</p>
                             </div>
                         </a>
                     </motion.div>
