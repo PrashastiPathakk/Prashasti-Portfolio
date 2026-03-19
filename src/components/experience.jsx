@@ -30,13 +30,6 @@ const achievements = [
         href: "https://www.hackerrank.com/certificates/c2d76388e684",
     },
     {
-        title: "Advanced DSA Practitioner",
-        issuer: "LeetCode / GeeksforGeeks",
-        tag: "[ 200+ Solved ]",
-        detail: "Consistent performance in competitive programming, mastering Dynamic Programming, Graph Theory, and complex system patterns.",
-        href: "https://leetcode.com/u/PrashastiPathak/",
-    },
-    {
         title: "IEEE Graduate Student Member",
         issuer: "IEEE (Institute of Electrical and Electronics Engineers)",
         tag: "[ 2023 - 2024 ]",
