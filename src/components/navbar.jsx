@@ -15,7 +15,7 @@ const NavLinks = [
     { name: 'Projects', href: '#projects' },
     { name: 'Experience', href: '#experience' },
     { name: 'Blog', href: '/blog' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Contact', href: '/#contact' },
 ];
 
 export default function Navbar() {
@@ -35,19 +35,21 @@ export default function Navbar() {
     }, []);
 
     const handleScroll = (e, href) => {
-        if (href.startsWith('#')) {
-            e.preventDefault();
-            const id = href.substring(1);
-            const element = document.getElementById(id);
-            if (element) {
-                element.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start',
-                });
-                // Update URL without jump
-                window.history.pushState(null, '', href);
+        if (href.includes('#')) {
+            const isHomePage = window.location.pathname === '/';
+            if (isHomePage) {
+                e.preventDefault();
+                const id = href.split('#')[1];
+                const element = document.getElementById(id);
+                if (element) {
+                    element.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start',
+                    });
+                    window.history.pushState(null, '', href);
+                }
+                setIsOpen(false);
             }
-            setIsOpen(false);
         }
     };
 
@@ -85,15 +87,7 @@ export default function Navbar() {
                                     <Linkedin size={20} />
                                 </Link>
                             </div>
-                            <motion.button
-                                whileHover={{ scale: 1.1, rotate: 10 }}
-                                whileTap={{ scale: 0.9 }}
-                                onClick={openArchModal}
-                                className="p-2 rounded-lg bg-accent/10 text-accent hover:bg-accent/20 transition-all ml-2"
-                                title="Under the Hood"
-                            >
-                                <Cpu size={20} />
-                            </motion.button>
+
                             <motion.button
                                 whileHover={{ scale: 1.1, rotate: 15 }}
                                 whileTap={{ scale: 0.9 }}
@@ -127,12 +121,7 @@ export default function Navbar() {
                     </div>
 
                     <div className="md:hidden flex items-center gap-4">
-                        <button
-                            onClick={openArchModal}
-                            className="p-2 rounded-lg bg-accent/10 text-accent hover:bg-accent/20 transition-all"
-                        >
-                            <Cpu size={20} />
-                        </button>
+
                         <button
                             onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
                             className="p-2 rounded-lg bg-primary/10 text-primary hover:bg-primary/20 transition-all"
