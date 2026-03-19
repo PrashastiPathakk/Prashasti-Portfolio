@@ -117,7 +117,7 @@ export default function Skills() {
                                     {/* Header: Identity */}
                                     <div className="flex items-center justify-between">
                                         <div className="space-y-1">
-                                            <span className="text-[10px] font-black text-primary uppercase tracking-[0.3em]">About.</span>
+                                            <span className="text-[10px] font-black text-primary uppercase tracking-[0.3em]">Core Identity.</span>
                                             <h4 className="text-2xl font-black text-white italic tracking-tighter uppercase">Profile</h4>
                                         </div>
                                         <div className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center text-primary/40 group-hover:text-primary transition-colors">
