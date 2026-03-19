@@ -108,7 +108,7 @@ export default function Skills() {
                                 initial={{ opacity: 0, x: 20 }}
                                 whileInView={{ opacity: 1, x: 0 }}
                                 viewport={{ once: true }}
-                                className="bg-[#1A1D24] rounded-[3rem] p-12 lg:p-16 h-full shadow-4xl relative overflow-hidden group border border-white/5"
+                                className="bg-[#21242C] rounded-2xl p-10 lg:p-14 h-full shadow-4xl relative overflow-hidden group border border-white/5"
                             >
                                 {/* Background Decorative Element */}
                                 <div className="absolute -top-20 -right-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/10 transition-colors duration-1000" />
