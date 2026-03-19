@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
     metadataBase: new URL('https://prashasti-portfolio.vercel.app'),
-    title: "Prashasti Pathak — Software Developer",
+    title: "Prashasti Pathak",
     description: "Final-year CS student and SDE Intern building impactful, production-ready applications.",
     keywords: ["Software Developer", "SDE Intern", "JavaScript", "Node.js", "Express.js", "MongoDB", "React", "Full-Stack Developer", "REST API", "DSA"],
     authors: [{ name: "Prashasti Pathak" }],
@@ -23,9 +23,9 @@ export const metadata = {
         type: "website",
         locale: "en_US",
         url: "https://prashasti-portfolio.vercel.app",
-        title: "Prashasti Pathak — Software Developer",
+        title: "Prashasti Pathak",
         description: "Final-year CS student and SDE Intern building impactful, production-ready applications.",
-        siteName: "Prashasti Portfolio",
+        siteName: "Prashasti Pathak",
         images: [
             {
                 url: "/profile.png",
@@ -37,7 +37,7 @@ export const metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Prashasti Pathak — Software Developer",
+        title: "Prashasti Pathak",
         description: "Final-year CS student and SDE Intern building impactful, production-ready applications.",
         images: ["/profile.png"],
     },
