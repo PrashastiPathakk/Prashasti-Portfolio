@@ -36,7 +36,7 @@ export default function Navbar() {
 
     const handleScroll = (e, href) => {
         if (href.includes('#')) {
-            const isHomePage = window.location.pathname === '/';
+            const isHomePage = window.location.pathname === '/' || window.location.pathname === '' || window.location.pathname.endsWith('index.html');
             if (isHomePage) {
                 e.preventDefault();
                 const id = href.split('#')[1];
